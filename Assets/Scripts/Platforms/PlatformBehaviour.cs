@@ -38,7 +38,7 @@ public class PlatformBehaviour : MonoBehaviour
             transform.position = gameManager.backgroundStart;
             data = gameManager.NextPlatform();
             DestroyImmediate(platform);
-            platform = Instantiate(data.platform, transform);
+            platform = Instantiate(data.platform, new Vector3(gameManager.backgroundStart.x, -4.6f), Quaternion.identity, transform);
         }
     }
 }
