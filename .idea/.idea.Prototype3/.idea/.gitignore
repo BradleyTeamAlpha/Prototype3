@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/contentModel.xml
+/.idea.Prototype3.iml
+/modules.xml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Bradley\2020-2021\Semseter 1\IM 388\Prototype3\.idea\.idea.Prototype3\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
