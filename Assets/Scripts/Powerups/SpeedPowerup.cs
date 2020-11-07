@@ -6,9 +6,9 @@ public class SpeedPowerup : PowerupBase
 {
 
     /// <summary>
-    /// Reference to the GameManager
+    /// Reference to the PowerupManager
     /// </summary>
-    private GameManager gameManager;
+    private PowerupManager manager;
 
     /// <summary>
     /// What speed the game started at
@@ -17,23 +17,18 @@ public class SpeedPowerup : PowerupBase
 
     [Tooltip("How long the boost lasts for")]
     public float boostDuration;
+
+    [Tooltip("How much the powerup should boost speed")]
+    public float boostMultiplier;
     private void Start()
     {
-        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+        manager = GameObject.FindWithTag("GameController").GetComponent<PowerupManager>();
     }
     
     
     protected override void DoPowerup()
     {
-        startSpeed = gameManager.speed;
-        gameManager.speed *= 1.3f;
-        StartCoroutine(ResetSpeed());
+        manager.StartCoroutine(manager.SpeedPowerup(boostMultiplier, boostDuration));
     }
 
-    private IEnumerator ResetSpeed()
-    {
-        yield return new WaitForSeconds(boostDuration);
-        gameManager.speed = startSpeed;
-    }
-    
 }
