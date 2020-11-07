@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Player's score")]
     public int score;
+
+    [Tooltip("Backgrounds")]
+    public List<Sprite> backgrounds;
     #region Player stuff
     /// <summary>
     /// Player's health
@@ -64,5 +67,11 @@ public class GameManager : MonoBehaviour
         int rand = Random.Range(0, platforms.Count);
 
         return platforms[rand];
+    }
+
+    public Sprite Backgrounds()
+    {
+        int randomBG = Random.Range(0, backgrounds.Count);
+        return backgrounds[randomBG];
     }
 }
