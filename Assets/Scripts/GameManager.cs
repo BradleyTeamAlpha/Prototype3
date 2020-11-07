@@ -16,6 +16,12 @@ public class GameManager : MonoBehaviour
     [Tooltip("Player's score")]
     public int score;
 
+    [Tooltip("Score cooldown")]
+    public float scoreCooldown;
+
+    [Tooltip("Score timer decrease")]
+    public float scoreDecrease;
+
     [Tooltip("Backgrounds")]
     public List<Sprite> backgrounds;
     #region Player stuff
@@ -51,6 +57,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Health = startHealth;
+        StartCoroutine(ScoreSystem());
     }
 
     private void Update()
@@ -73,5 +80,15 @@ public class GameManager : MonoBehaviour
     {
         int randomBG = Random.Range(0, backgrounds.Count);
         return backgrounds[randomBG];
+    }
+
+    public IEnumerator ScoreSystem()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(scoreCooldown);
+            ++score;
+            scoreCooldown -= scoreDecrease;
+        }
     }
 }
