@@ -12,41 +12,57 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("How fast the platforms should go")]
     public float speed;
-    
+
+    [Tooltip("Player's score")]
+    public int score;
     #region Player stuff
     /// <summary>
     /// Player's health
     /// </summary>
-    public int health {
+    public float Health
+    {
         get
         {
             return health;
         }
         set
         {
+            health = value;
             if (health > startHealth)
             {
                 health = startHealth;
             }
         } 
     }
+
+    private float health;
         
     [Tooltip("Player's starting health, also their max")]
     public int startHealth;
+
+    [Tooltip("How much health per second should be drained")]
+    public float healthDrainRate;
     
     #endregion
 
     private void Start()
     {
-        health = startHealth;
+        Health = startHealth;
+    }
+
+    private void Update()
+    {
+        Health -= healthDrainRate * Time.deltaTime;
     }
     
+    /// <summary>
+    /// Picks the next platform to spawn. Can do fancy logic here
+    /// </summary>
+    /// <returns>The next platform to spawn</returns>
     public PlatformData NextPlatform()
     {
         int rand = Random.Range(0, platforms.Count);
 
         return platforms[rand];
     }
-    
-
 }
