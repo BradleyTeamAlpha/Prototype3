@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 8496430562425324061}
   - component: {fileID: 4430543336872621232}
   - component: {fileID: 101952971852969801}
-  - component: {fileID: 5334541886044423160}
+  - component: {fileID: 1450236224791990261}
   m_Layer: 0
   m_Name: Electric fence
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 344302337
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 5888588132558432782, guid: f287f6ce169f28340a28d7ceddef128f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -97,17 +97,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 90111531d0579a84fa6a0dc40bb7f5ba, type: 2}
---- !u!136 &5334541886044423160
-CapsuleCollider:
+--- !u!70 &1450236224791990261
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2454600285462473014}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.72678804
-  m_Height: 4.270774
-  m_Direction: 1
-  m_Center: {x: -0.09297371, y: -0.12396526, z: 0}
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.08428049, y: 0.0140480995}
+  m_Size: {x: 1.8443861, y: 4.174172}
+  m_Direction: 0

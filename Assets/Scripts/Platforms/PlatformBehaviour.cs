@@ -9,8 +9,8 @@ public class PlatformBehaviour : MonoBehaviour
 
     /// <summary>
     /// Child object which holds the actual platform objects
-        /// </summary>
-        private GameObject platform;
+    /// </summary>
+    private GameObject platform;
 
     /// <summary>
     /// Reference to the Game Manager

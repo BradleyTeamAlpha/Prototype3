@@ -18,6 +18,8 @@ public class PlayerBehaviour : MonoBehaviour
     [Tooltip("How hard the player should jump up")]
     public float jumpForce;
 
+    private bool isJumping = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,17 +34,18 @@ public class PlayerBehaviour : MonoBehaviour
         linecastEnd.y -= 1;
         Debug.DrawLine(transform.position, linecastEnd);
         RaycastHit2D hit = Physics2D.Linecast(transform.position, linecastEnd, (1 << 8));
-        if (Input.GetKeyDown(KeyCode.W) && hit.transform.CompareTag("Platform"))
+        if (Input.GetButtonDown("Jump") && hit.transform.CompareTag("Platform"))
         {
             rb.AddForce(new Vector2(0, jumpForce));
         }
-    }
 
+    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Obstacle"))
+        if (other.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("Hit obstacle!");
+            Debug.Log("Hit player");
             gameManager.Health -= other.GetComponent<ObstacleBehaviour>().data.damage;
         }
     }
