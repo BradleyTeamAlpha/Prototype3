@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     #region Score
     
+    [Header("Score Variables")]
     [Tooltip("Player's score")]
     public int score;
 
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
     
     #region Scrolling
     
+    [Header("Scrolling Variables")]
     [Tooltip("Where the backgrounds start moving from")]
     public Vector3 backgroundStart;
     
@@ -53,16 +55,20 @@ public class GameManager : MonoBehaviour
             {
                 health = startHealth;
             }
-        } 
+        }
     }
 
     private float health;
-        
+    
+    [Header("Player Variables")]
     [Tooltip("Player's starting health, also their max")]
     public int startHealth;
 
     [Tooltip("How much health per second should be drained")]
     public float healthDrainRate;
+
+    [Tooltip("How much the Smart Grid heals the player per press")]
+    public float healAmount;
     
     #endregion
 
