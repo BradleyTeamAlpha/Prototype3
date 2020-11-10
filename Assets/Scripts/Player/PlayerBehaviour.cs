@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,6 +35,15 @@ public class PlayerBehaviour : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && hit.transform.CompareTag("Platform"))
         {
             rb.AddForce(new Vector2(0, jumpForce));
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            Debug.Log("Hit obstacle!");
+            gameManager.Health -= other.GetComponent<ObstacleBehaviour>().data.damage;
         }
     }
 }
