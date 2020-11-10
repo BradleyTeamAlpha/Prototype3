@@ -1111,6 +1111,7 @@ GameObject:
   - component: {fileID: 1684135349}
   - component: {fileID: 1684135350}
   - component: {fileID: 1684135351}
+  - component: {fileID: 1684135352}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -1144,15 +1145,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf9a7fe251107541a88e9259569f329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  scoreCooldown: 5
+  scoreDecrease: 0.01
+  scoreIncrease: 10
   backgroundStart: {x: 18, y: 0, z: 0}
+  speed: 5
   platforms:
   - {fileID: 11400000, guid: f5e3c7bd9fe309240b7228ec96be6826, type: 2}
   - {fileID: 11400000, guid: 23f79be5bb0e9f740a3d56c5b07abaa0, type: 2}
   - {fileID: 11400000, guid: 6fd269a174e3f9248ab8ae5ce89c4e22, type: 2}
-  speed: 5
-  score: 0
-  scoreCooldown: 5
-  scoreDecrease: 0.01
   backgrounds:
   - {fileID: 17611266751527752, guid: d146a4ca551d3b44283d38ea0b81ffa1, type: 3}
   - {fileID: 9066447158778689794, guid: 8c6c5221a7e5ec14da44ff240e553420, type: 3}
@@ -1172,6 +1174,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1684135350}
+--- !u!114 &1684135352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684135348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d90dfb5c8c003344e8097e4091212c62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 0
+  costChangeTimeMax: 2
+  costChangeTimeMin: 0.5
+  costChangeAmountCeil: 5
+  costChangeAmountFloor: 1
+  costMax: 15
+  costMin: 1
 --- !u!1 &1772249189
 GameObject:
   m_ObjectHideFlags: 0

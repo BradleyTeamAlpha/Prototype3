@@ -21,7 +21,7 @@ public class BackgroundScroll : MonoBehaviour
         {
             Vector3 bgFix = new Vector3(23.92f, 0, 0);
             transform.position = bgFix;//could change
-            Sprite temp = gameManager.Backgrounds();
+            Sprite temp = gameManager.NextBackground();
             gameObject.GetComponent<SpriteRenderer>().sprite = temp;//should set sprite to whatever game object gave-can do fancy logic in function later
         }
     }

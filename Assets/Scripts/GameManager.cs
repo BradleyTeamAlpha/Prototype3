@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Tooltip("Where the backgrounds start moving from")]
-    public Vector3 backgroundStart;
+
+    #region Score
     
-    [Tooltip("All possible platforms")]
-    public List<PlatformData> platforms;
-
-    [Tooltip("How fast the platforms should go")]
-    public float speed;
-
     [Tooltip("Player's score")]
     public int score;
 
@@ -22,8 +16,26 @@ public class GameManager : MonoBehaviour
     [Tooltip("Score timer decrease")]
     public float scoreDecrease;
 
+    [Tooltip("How much the score should increase each score tick")]
+    public int scoreIncrease;
+    #endregion
+    
+    #region Scrolling
+    
+    [Tooltip("Where the backgrounds start moving from")]
+    public Vector3 backgroundStart;
+    
+    [Tooltip("How fast the platforms should go")]
+    public float speed;
+    
+    [Tooltip("All possible platforms")]
+    public List<PlatformData> platforms;
+    
     [Tooltip("Backgrounds")]
     public List<Sprite> backgrounds;
+    
+    #endregion
+    
     #region Player stuff
     /// <summary>
     /// Player's health
@@ -76,7 +88,7 @@ public class GameManager : MonoBehaviour
         return platforms[rand];
     }
 
-    public Sprite Backgrounds()
+    public Sprite NextBackground()
     {
         int randomBG = Random.Range(0, backgrounds.Count);
         return backgrounds[randomBG];
@@ -87,7 +99,7 @@ public class GameManager : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(scoreCooldown);
-            ++score;
+            score += scoreIncrease;
             scoreCooldown -= scoreDecrease;
         }
     }
