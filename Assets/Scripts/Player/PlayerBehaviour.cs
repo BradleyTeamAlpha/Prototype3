@@ -31,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         Vector2 linecastEnd = transform.position;
-        linecastEnd.y -= 1;
+        linecastEnd.y -= 2;
         Debug.DrawLine(transform.position, linecastEnd);
         RaycastHit2D hit = Physics2D.Linecast(transform.position, linecastEnd, (1 << 8));
         if (Input.GetButtonDown("Jump") && hit.transform.CompareTag("Platform"))

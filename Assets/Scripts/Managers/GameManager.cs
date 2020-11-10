@@ -55,6 +55,11 @@ public class GameManager : MonoBehaviour
             {
                 health = startHealth;
             }
+
+            if (health <= 0)
+            {
+                Death();
+            }
         }
     }
 
@@ -100,7 +105,7 @@ public class GameManager : MonoBehaviour
         return backgrounds[randomBG];
     }
 
-    public IEnumerator ScoreSystem()
+    private IEnumerator ScoreSystem()
     {
         while(true)
         {
@@ -108,5 +113,10 @@ public class GameManager : MonoBehaviour
             score += scoreIncrease;
             scoreCooldown -= scoreDecrease;
         }
+    }
+
+    private void Death()
+    {
+        Time.timeScale = 0;
     }
 }
