@@ -14,4 +14,11 @@ public class PowerupManager : MonoBehaviour
         yield return new WaitForSeconds(boostDuration);
         gameManager.speed /= speedMultiplier;
     }
+
+    public IEnumerator MagnetPowerup(float duration)
+    {
+        gameManager.isManget = true;
+        yield return new WaitForSeconds(duration);
+        gameManager.isManget = false;
+    }
 }

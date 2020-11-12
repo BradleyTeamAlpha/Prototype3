@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BackgroundScroll : MonoBehaviour
 {
+    [Tooltip("How much to slow the background down by")]
+    public float scrollDivisor;
     // Start is called before the first frame update
     private GameManager gameManager;
     void Start()
@@ -15,7 +17,7 @@ public class BackgroundScroll : MonoBehaviour
     void Update()
     {
         Vector2 newPos = transform.position;
-        newPos.x -= (gameManager.speed/2) * Time.deltaTime;//should parallax the backgrounds
+        newPos.x -= (gameManager.speed/scrollDivisor) * Time.deltaTime;//should parallax the backgrounds
         transform.position = newPos;
         if(transform.position.x < -23.92)//replace -18 with magic number of background size with Charli. Trial and error baby!
         {

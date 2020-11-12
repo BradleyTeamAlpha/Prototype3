@@ -1649,6 +1649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa111931e5edda4aaad5fccb27b17bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollDivisor: 2
 --- !u!212 &1636478752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1780,6 +1781,7 @@ MonoBehaviour:
   healthDrainRate: 0.5
   healAmount: 10
   shieldIcon: {fileID: 772703693}
+  isManget: 0
 --- !u!114 &1684135351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,6 +2113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa111931e5edda4aaad5fccb27b17bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollDivisor: 2
 --- !u!212 &1861125693
 SpriteRenderer:
   m_ObjectHideFlags: 0

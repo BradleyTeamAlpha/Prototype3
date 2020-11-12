@@ -80,7 +80,9 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Shield icon, used to display player is shielded.")]
     public GameObject shieldIcon;
-    
+
+    [Tooltip("Is the player magnetized. True is yes, false if no")]
+    public bool isManget;
     #endregion
 
     private void Start()
@@ -140,13 +142,7 @@ public class GameManager : MonoBehaviour
         if (shield > 0)
         {
             shield -= amount;
-        }
-
-        if (shield < 0)
-        {
-            Health -= shield;
-        }
-        else
+        } else
         {
             Health -= amount;
         }
