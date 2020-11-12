@@ -46,7 +46,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Hit player");
-            gameManager.Health -= other.GetComponent<ObstacleBehaviour>().data.damage;
+            gameManager.Damage(other.GetComponent<ObstacleBehaviour>().GetData().damage);
         }
     }
 }

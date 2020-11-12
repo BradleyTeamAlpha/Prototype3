@@ -10,9 +10,8 @@ public class PowerupManager : MonoBehaviour
     
     public IEnumerator SpeedPowerup(float speedMultiplier, float boostDuration)
     {
-        float startSpeed = gameManager.speed;
         gameManager.speed *= speedMultiplier;
         yield return new WaitForSeconds(boostDuration);
-        gameManager.speed = startSpeed;
+        gameManager.speed /= speedMultiplier;
     }
 }

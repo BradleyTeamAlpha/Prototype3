@@ -17,7 +17,7 @@ public class MinizillaBehaviour : ObstacleBehaviour
         while (true)
         {
             yield return new WaitForSeconds(data.timeBetweenShots);
-            Instantiate(data.fireball, transform.position, Quaternion.identity);
+            Instantiate(data.projectile, transform.position, Quaternion.identity);
         }
     }
 }

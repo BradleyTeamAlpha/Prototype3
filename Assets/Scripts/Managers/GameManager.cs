@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
         set
         {
             health = value;
+
             if (health > startHealth)
             {
                 health = startHealth;
@@ -64,6 +65,8 @@ public class GameManager : MonoBehaviour
     }
 
     private float health;
+
+    public float shield;
     
     [Header("Player Variables")]
     [Tooltip("Player's starting health, also their max")]
@@ -74,6 +77,9 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("How much the Smart Grid heals the player per press")]
     public float healAmount;
+
+    [Tooltip("Shield icon, used to display player is shielded.")]
+    public GameObject shieldIcon;
     
     #endregion
 
@@ -85,7 +91,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        Health -= healthDrainRate * Time.deltaTime;
+        Damage(healthDrainRate * Time.deltaTime);
+
+        if (shield > 0)
+        {
+            shieldIcon.SetActive(true);
+        }
+        else
+        {
+            shieldIcon.SetActive(false);
+        }
     }
     
     /// <summary>
@@ -118,5 +133,22 @@ public class GameManager : MonoBehaviour
     private void Death()
     {
         Time.timeScale = 0;
+    }
+
+    public void Damage(float amount)
+    {
+        if (shield > 0)
+        {
+            shield -= amount;
+        }
+
+        if (shield < 0)
+        {
+            Health -= shield;
+        }
+        else
+        {
+            Health -= amount;
+        }
     }
 }

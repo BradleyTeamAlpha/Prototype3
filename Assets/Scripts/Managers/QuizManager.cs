@@ -11,7 +11,15 @@ public class QuizManager : MonoBehaviour
     private List<string> factsList;
     private List<string> questionsList;
     public List<string> aquiredFacts = new List<string>();
-    
+
+    [Tooltip("Reference to the UI Manager.")]
+    public UIManager uiManager;
+
+    [Tooltip("How long to pause/slow down the game for")]
+    public float pauseTime;
+
+    [Tooltip("How much to slow down the game. 0 to completly pause")]
+    public float slowdownAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,14 +71,19 @@ public class QuizManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Give the player a fact
+    /// Give the player a fact. Pauses the game temporarily calls for the text to be shown on screen
     /// </summary>
     /// <param name="factID">Where in the list to give the fact</param>
-    private void AquireFact(int factID)
+    private IEnumerator AquireFact(int factID)
     {
         string fact = GetFact(factID);
         factsList.RemoveAt(factID);
         aquiredFacts.Add(fact);
+        uiManager.ShowFact(fact);
+        Time.timeScale = slowdownAmount;
+        yield return new WaitForSecondsRealtime(pauseTime);
+        uiManager.HideFact();
+        Time.timeScale = 1;
     }
 
     /// <summary>
@@ -78,7 +91,7 @@ public class QuizManager : MonoBehaviour
     /// </summary>
     public void AquireRandomFact()
     {
-        AquireFact(Random.Range(0, factsList.Count));
+        StartCoroutine(AquireFact(Random.Range(0, factsList.Count)));
     }
 
     /// <summary>
