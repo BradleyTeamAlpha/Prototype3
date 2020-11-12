@@ -19,7 +19,12 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("The colors to go between on reporting recharge cost")]
     public Gradient imageGradient;
-    
+
+    [Tooltip("Text that pops up when a fact is collected.")]
+    public Text factText;
+
+    [Tooltip("Parent object for the fact text")]
+    public GameObject factObject;
     public void BuyHealth()
     {
         if (gameManager.score >= smartGrid.cost)
@@ -45,5 +50,15 @@ public class UIManager : MonoBehaviour
 
         smartMeterColor.color = newColor;
     }
-    
+
+    public void ShowFact(string fact)
+    {
+        factObject.SetActive(true);
+        factText.text = fact;
+    }
+
+    public void HideFact()
+    {
+        factObject.SetActive(false);
+    }
 }

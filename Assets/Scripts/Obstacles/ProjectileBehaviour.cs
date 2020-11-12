@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireballBehaviour : ObstacleBehaviour
+public class ProjectileBehaviour : ObstacleBehaviour
 {
 
-    [Tooltip("How fast the fireball is")]
+    [Tooltip("How fast the projectile is")]
     public float speed;
     
     private void Update()

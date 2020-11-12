@@ -13,4 +13,9 @@ public class ObstacleBehaviour : MonoBehaviour
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
     }
 
+    public ObstacleData GetData()
+    {
+        return data;
+    }
+
 }
