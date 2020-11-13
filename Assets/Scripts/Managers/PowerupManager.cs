@@ -6,7 +6,9 @@ public class PowerupManager : MonoBehaviour
 
     [Tooltip("Reference to the Game Manager")]
     public GameManager gameManager;
-    
+
+    [Tooltip("Reference to the Player Manager")]
+    public PlayerManager playerManager;
     
     public IEnumerator SpeedPowerup(float speedMultiplier, float boostDuration)
     {
@@ -17,8 +19,8 @@ public class PowerupManager : MonoBehaviour
 
     public IEnumerator MagnetPowerup(float duration)
     {
-        gameManager.isManget = true;
+        playerManager.isManget = true;
         yield return new WaitForSeconds(duration);
-        gameManager.isManget = false;
+        playerManager.isManget = false;
     }
 }

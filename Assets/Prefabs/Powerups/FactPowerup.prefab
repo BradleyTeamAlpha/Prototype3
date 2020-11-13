@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3472833851525368980}
   - component: {fileID: 1137375550330371926}
   - component: {fileID: 2260751621191946313}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FactPowerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

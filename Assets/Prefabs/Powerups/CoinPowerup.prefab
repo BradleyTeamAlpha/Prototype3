@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5659620498805927237}
   - component: {fileID: 5659620498805927239}
   - component: {fileID: 5659620498805927288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CoinPowerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,5 +113,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 25
-  magnetRange: 5
   floatSpeed: 5

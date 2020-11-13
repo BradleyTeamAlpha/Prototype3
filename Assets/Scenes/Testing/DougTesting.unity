@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 253331171}
   - component: {fileID: 253331173}
   - component: {fileID: 253331172}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 253331168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: -1.83, z: -4.4438972}
+  m_LocalPosition: {x: -0.4, y: -1.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 772703695}
@@ -971,7 +971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 772703695}
   - component: {fileID: 772703694}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShieldIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1729,6 +1729,7 @@ GameObject:
   - component: {fileID: 1684135352}
   - component: {fileID: 1684135353}
   - component: {fileID: 1684135354}
+  - component: {fileID: 1684135355}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -1776,12 +1777,6 @@ MonoBehaviour:
   - {fileID: 17611266751527752, guid: d146a4ca551d3b44283d38ea0b81ffa1, type: 3}
   - {fileID: 9066447158778689794, guid: 8c6c5221a7e5ec14da44ff240e553420, type: 3}
   - {fileID: -6397470500183095477, guid: abb210ec87cf5e8428c43655fdc80188, type: 3}
-  shield: 0
-  startHealth: 100
-  healthDrainRate: 0.5
-  healAmount: 10
-  shieldIcon: {fileID: 772703693}
-  isManget: 0
 --- !u!114 &1684135351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1795,6 +1790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1684135350}
+  playerManager: {fileID: 1684135355}
 --- !u!114 &1684135352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1827,6 +1823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1684135350}
+  playerManager: {fileID: 1684135355}
   smartGrid: {fileID: 1684135352}
   scoreText: {fileID: 110848298}
   smartMeterColor: {fileID: 870766434}
@@ -1877,6 +1874,25 @@ MonoBehaviour:
   uiManager: {fileID: 1684135353}
   pauseTime: 5
   slowdownAmount: 0
+--- !u!114 &1684135355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684135348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1291a530bc53e24d8aa8bb60fb8c01d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shield: 0
+  startHealth: 100
+  healthDrainRate: 0.5
+  healAmount: 10
+  shieldIcon: {fileID: 772703693}
+  isManget: 0
+  magnetRange: 5
 --- !u!1 &1768483125
 GameObject:
   m_ObjectHideFlags: 0

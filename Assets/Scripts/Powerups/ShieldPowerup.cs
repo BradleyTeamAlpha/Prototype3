@@ -5,17 +5,17 @@ using UnityEngine;
 public class ShieldPowerup : PowerupBase
 {
 
-    private GameManager gameManager;
+    private PlayerManager playerManager;
 
     [Tooltip("How much shield to give")]
     public float amount;
     
     private void Start()
     {
-        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+        playerManager = GameObject.FindWithTag("GameController").GetComponent<PlayerManager>();
     }
     protected override void DoPowerup()
     {
-        gameManager.shield = amount;
+        playerManager.shield = amount;
     }
 }

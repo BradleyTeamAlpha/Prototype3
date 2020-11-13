@@ -7,6 +7,9 @@ public class UIManager : MonoBehaviour
 {
     [Tooltip("Reference to the GameManager")]
     public GameManager gameManager;
+
+    [Tooltip("Reference to the Player Manager")]
+    public PlayerManager playerManager;
     
     [Tooltip("Reference to the Smart Grid Manager")]
     public SmartGridManager smartGrid;
@@ -30,7 +33,7 @@ public class UIManager : MonoBehaviour
         if (gameManager.score >= smartGrid.cost)
         {
             gameManager.score -= smartGrid.cost;
-            gameManager.Health += gameManager.healAmount;
+            playerManager.Health += playerManager.healAmount;
         }
     }
 

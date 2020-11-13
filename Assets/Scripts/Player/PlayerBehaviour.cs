@@ -6,9 +6,9 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     /// <summary>
-    /// Reference to the GameManager
+    /// Reference to the PlayerManager
     /// </summary>
-    private GameManager gameManager;
+    private PlayerManager playerManager;
 
     /// <summary>
     /// Reference to the player's rigidbody2d
@@ -23,7 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+        playerManager = GameObject.FindWithTag("GameController").GetComponent<PlayerManager>();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -46,7 +46,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Hit player");
-            gameManager.Damage(other.GetComponent<ObstacleBehaviour>().GetData().damage);
+            playerManager.Damage(other.GetComponent<ObstacleBehaviour>().GetData().damage);
         }
     }
 }

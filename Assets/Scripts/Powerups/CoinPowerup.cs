@@ -6,19 +6,19 @@ public class CoinPowerup : PowerupBase
 {
     private GameManager gameManager;
 
+    private PlayerManager playerManager;
+
     private GameObject player;
     
     [Tooltip("How much to increase the score by")]
     public int amount;
-
-    [Tooltip("How far away the magnet affects the coin")]
-    public float magnetRange;
 
     [Tooltip("How quickly the coins move to the player")]
     public float floatSpeed;
     private void Start()
     {
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
+        playerManager = GameObject.FindWithTag("GameController").GetComponent<PlayerManager>();
         player = GameObject.FindWithTag("Player");
     }
 
@@ -29,12 +29,17 @@ public class CoinPowerup : PowerupBase
 
     private void Update()
     {
-        if (gameManager.isManget)
+        if (playerManager.isManget)
         {
-            if ((transform.position -= player.transform.position).magnitude <= magnetRange)
+            Vector2 rangeEnd = player.transform.position;
+            Debug.DrawLine(transform.position, rangeEnd);
+            string[] masks = new[] {"Default", "Platform", "Player"};
+            LayerMask mask = LayerMask.GetMask(masks);
+            RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, mask);
+            if (hit.transform.CompareTag("Player") && hit.distance < playerManager.magnetRange)
             {
-                float step = floatSpeed * Time.deltaTime;
-                transform.position = Vector2.MoveTowards(transform.position, player.transform.position, step);
+                transform.position = Vector2.MoveTowards(transform.position, player.transform.position,
+                    (floatSpeed * Time.deltaTime));
             }
         }
     }
