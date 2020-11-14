@@ -53,8 +53,17 @@ public class PlayerManager : MonoBehaviour
 
     [Tooltip("How large the magnet effect on the player is")]
     public float magnetRange;
+
+    [Tooltip("How many times the player has revived")]
+    public int timesRevived;
     
+    [Tooltip("Maximum amount of times the player can revive")]
+    public int maxRevives;
     #endregion
+    
+    [Tooltip("Reference to the Quiz manager")]
+    public QuizManager quizManager;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +73,10 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Damage(healthDrainRate * Time.deltaTime);
+        if (Health > 0)
+        {
+            Damage(healthDrainRate * Time.deltaTime);
+        }
 
         if (shield > 0)
         {
@@ -90,6 +102,14 @@ public class PlayerManager : MonoBehaviour
     private void Death()
     {
         Time.timeScale = 0;
-        
+        quizManager.StartQuiz();
+    }
+
+    public void Revive()
+    {
+        ++timesRevived;
+        Health = startHealth;
+        shield = 0;
+        Time.timeScale = 1;
     }
 }
