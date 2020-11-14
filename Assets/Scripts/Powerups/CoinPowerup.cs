@@ -33,7 +33,7 @@ public class CoinPowerup : PowerupBase
         {
             Vector2 rangeEnd = player.transform.position;
             Debug.DrawLine(transform.position, rangeEnd);
-            string[] masks = new[] {"Default", "Platform", "Player"};
+            string[] masks = {"Default", "Platform", "Player"};
             LayerMask mask = LayerMask.GetMask(masks);
             RaycastHit2D hit = Physics2D.Linecast(transform.position, player.transform.position, mask);
             if (hit.transform.CompareTag("Player") && hit.distance < playerManager.magnetRange)

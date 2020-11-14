@@ -53,6 +53,7 @@ public class PlayerManager : MonoBehaviour
 
     [Tooltip("How large the magnet effect on the player is")]
     public float magnetRange;
+    
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -89,5 +90,6 @@ public class PlayerManager : MonoBehaviour
     private void Death()
     {
         Time.timeScale = 0;
+        
     }
 }

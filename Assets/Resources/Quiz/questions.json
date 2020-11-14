@@ -1,14 +1,84 @@
 {
-  "text": [
-    "Question1",
-    "Question2",
-    "Question3",
-    "Question4",
-    "Question5",
-    "Question6",
-    "Question7",
-    "Question8",
-    "Question9",
-    "Question10"
+  "Questions": [
+    {
+      "Question": "Question1",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question2",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question3",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question4",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question5",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question6",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question7",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question8",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question9",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    },
+    {
+      "Question": "Question10",
+      "Answers": [
+        "Answer1",
+        "Answer2",
+        "Answer3"
+      ]
+    }
   ]
 }

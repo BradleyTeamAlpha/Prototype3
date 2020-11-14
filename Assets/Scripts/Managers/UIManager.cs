@@ -28,6 +28,17 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("Parent object for the fact text")]
     public GameObject factObject;
+
+    #region Quiz Stuff
+    
+    [Tooltip("Parent object for the quiz assets")]
+    public GameObject quizObject;
+
+    [Tooltip("")]
+    public Text questionText;
+    
+        
+    #endregion
     public void BuyHealth()
     {
         if (gameManager.score >= smartGrid.cost)
