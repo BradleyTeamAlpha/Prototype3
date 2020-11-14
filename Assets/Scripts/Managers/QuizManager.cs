@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class QuizManager : MonoBehaviour
 {
-    private JSONContainer questions;
-    private JSONContainer facts;
+    private QuestionContainer questions;
+    private FactContainer facts;
 
     private List<string> factsList;
-    private List<string> questionsList;
+    private List<QuestionInfo> questionsList;
     public List<string> aquiredFacts = new List<string>();
 
     [Tooltip("Reference to the UI Manager.")]
@@ -25,11 +25,11 @@ public class QuizManager : MonoBehaviour
     {
         TextAsset questionData = Resources.Load("Quiz/questions") as TextAsset;
         TextAsset factsData = Resources.Load("Quiz/facts") as TextAsset;
-        questions = JsonUtility.FromJson<JSONContainer>(questionData.text);
-        facts = JsonUtility.FromJson<JSONContainer>(factsData.text);
+        questions = JsonUtility.FromJson<QuestionContainer>(questionData.text);
+        facts = JsonUtility.FromJson<FactContainer>(factsData.text);
 
         factsList = facts.text.ToList();
-        questionsList = facts.text.ToList();
+        questionsList = questions.Questions.ToList();
     }
 
     /// <summary>
@@ -47,9 +47,11 @@ public class QuizManager : MonoBehaviour
     /// </summary>
     /// <param name="questionID">The location of the question to get</param>
     /// <returns>A question</returns>
-    private string GetQuestion(int questionID)
+    private QuestionInfo GetQuestion(int questionID)
     {
-        return questionsList[questionID];
+        QuestionInfo question = questionsList[questionID];
+        questionsList.RemoveAt(questionID);
+        return question;
     }
 
     /// <summary>
@@ -65,7 +67,7 @@ public class QuizManager : MonoBehaviour
     /// Return a random question from the ones possible
     /// </summary>
     /// <returns>A random question</returns>
-    public string GetRandomQuestion()
+    public QuestionInfo GetRandomQuestion()
     {
         return GetQuestion(Random.Range(0, questionsList.Count));
     }
