@@ -71,4 +71,9 @@ public class GameManager : MonoBehaviour
             scoreCooldown -= scoreDecrease;
         }
     }
+
+    public void EndGame()
+    {
+        Debug.Log("Game ended!");
+    }
 }

@@ -5,6 +5,12 @@ using UnityEngine;
 
 public class QuizManager : MonoBehaviour
 {
+    [Tooltip("Reference to the GameManager")]
+    public GameManager gameManager;
+
+    [Tooltip("Refernce to the PlayerManager")]
+    public PlayerManager playerManager;
+    
     private QuestionContainer questions;
     private FactContainer facts;
 
@@ -20,16 +26,31 @@ public class QuizManager : MonoBehaviour
 
     [Tooltip("How much to slow down the game. 0 to completly pause")]
     public float slowdownAmount;
+
+    [Tooltip("The current question being asked")]
+    public QuestionInfo currentQuestion;
+
+    [Tooltip("How many questions to ask during the quiz")]
+    public int maxQuestions;
+
+    /// <summary>
+    /// How many questions have been asked
+    /// </summary>
+    private int questionsAsked;
+
+    [Tooltip("How many points a correct question is worth, if it does not revive")]
+    public int quizPoints = 10;
     // Start is called before the first frame update
     void Start()
     {
-        TextAsset questionData = Resources.Load("Quiz/questions") as TextAsset;
-        TextAsset factsData = Resources.Load("Quiz/facts") as TextAsset;
+        TextAsset questionData = Resources.Load<TextAsset>("Quiz/questions");
+        TextAsset factsData = Resources.Load<TextAsset>("Quiz/facts");
         questions = JsonUtility.FromJson<QuestionContainer>(questionData.text);
         facts = JsonUtility.FromJson<FactContainer>(factsData.text);
 
         factsList = facts.text.ToList();
         questionsList = questions.Questions.ToList();
+        Debug.Log(questionsList.Count);
     }
 
     /// <summary>
@@ -69,7 +90,9 @@ public class QuizManager : MonoBehaviour
     /// <returns>A random question</returns>
     public QuestionInfo GetRandomQuestion()
     {
-        return GetQuestion(Random.Range(0, questionsList.Count));
+        int rand = Random.Range(0, questionsList.Count);
+        Debug.Log($"Rand: {rand}");
+        return GetQuestion(rand);
     }
 
     /// <summary>
@@ -103,5 +126,41 @@ public class QuizManager : MonoBehaviour
     public List<string> GetAquiredFacts()
     {
         return aquiredFacts;
+    }
+
+    public void StartQuiz()
+    {
+        uiManager.ShowQuiz();
+        currentQuestion = NextQuestion();
+        uiManager.UpdateQuiz(currentQuestion);
+    }
+
+    public QuestionInfo NextQuestion()
+    {
+        QuestionInfo question = GetRandomQuestion();
+        uiManager.UpdateQuiz(question);
+        return question;
+    }
+    
+    public void CheckAnswer(int answer)
+    {
+        if (answer == currentQuestion.Correct && playerManager.timesRevived < playerManager.maxRevives)
+        {
+            uiManager.EndQuiz();
+            playerManager.Revive();
+        }
+        else
+        {
+            ++questionsAsked;
+            if (questionsAsked < maxQuestions)
+            {
+                currentQuestion = NextQuestion();
+                gameManager.score += quizPoints;
+            }
+            else
+            {
+                gameManager.EndGame();
+            }
+        }
     }
 }

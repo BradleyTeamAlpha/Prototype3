@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,9 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("Reference to the Player Manager")]
     public PlayerManager playerManager;
+
+    [Tooltip("Reference to the quiz manager")]
+    public QuizManager quizManager;
     
     [Tooltip("Reference to the Smart Grid Manager")]
     public SmartGridManager smartGrid;
@@ -34,9 +38,11 @@ public class UIManager : MonoBehaviour
     [Tooltip("Parent object for the quiz assets")]
     public GameObject quizObject;
 
-    [Tooltip("")]
+    [Tooltip("Text for the current question")]
     public Text questionText;
-    
+
+    [Tooltip("Where the answers to the question get chosen")]
+    public Dropdown answerChoices;
         
     #endregion
     public void BuyHealth()
@@ -74,5 +80,37 @@ public class UIManager : MonoBehaviour
     public void HideFact()
     {
         factObject.SetActive(false);
+    }
+
+    public void ShowQuiz()
+    {
+        quizObject.SetActive(true);
+    }
+
+    public void EndQuiz()
+    {
+        quizObject.SetActive(false);
+    }
+    
+    public void UpdateQuiz(QuestionInfo question)
+    {
+        answerChoices.options.Clear();
+        List<string> options = new List<string>();
+        //questionText.text = question.Question;
+        string text = question.Question + "\n";
+        char character = 'A';
+        for (int i = 0; i < question.Answers.Length; ++i)
+        {
+            text += $"{character}: {question.Answers[i]}\n";
+            options.Add(character.ToString());
+            ++character;
+        }
+        answerChoices.AddOptions(options);
+        questionText.text = text;
+    }
+
+    public void ChooseAnswer()
+    {
+        quizManager.CheckAnswer(answerChoices.value);
     }
 }
