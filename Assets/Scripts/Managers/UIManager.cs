@@ -43,7 +43,15 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("Where the answers to the question get chosen")]
     public Dropdown answerChoices;
-        
+
+    [Tooltip("Button that selects an answer")]
+    public Button answerSelect;
+
+    [Tooltip("Button that advances from the confirmation screen")]
+    public Button confirmationSelect;
+
+    [Tooltip("The ending panel to be shown")]
+    public GameObject endscreen;
     #endregion
     public void BuyHealth()
     {
@@ -79,6 +87,7 @@ public class UIManager : MonoBehaviour
 
     public void HideFact()
     {
+        Time.timeScale = 1;
         factObject.SetActive(false);
     }
 
@@ -108,9 +117,38 @@ public class UIManager : MonoBehaviour
         answerChoices.AddOptions(options);
         questionText.text = text;
     }
-
+    
+    
     public void ChooseAnswer()
     {
-        quizManager.CheckAnswer(answerChoices.value);
+        bool isCorrect = quizManager.CheckAnswer(answerChoices.value);
+
+        answerSelect.gameObject.SetActive(false);
+        confirmationSelect.gameObject.SetActive(true);
+
+        string text = quizManager.currentQuestion.Answers[quizManager.currentQuestion.Correct];
+        
+        if (isCorrect)
+        {
+            text = "Correct, the answer is " + text;
+        }
+        else
+        {
+            text = "Incorrect, the answer is " + text;
+        }
+        
+        questionText.text = text;
+    }
+
+    public void NextQuestion()
+    {
+        quizManager.QuestionSetup(quizManager.CheckAnswer(answerChoices.value));
+        confirmationSelect.gameObject.SetActive(false);
+        answerSelect.gameObject.SetActive(true);
+    }
+
+    public void ShowEndgame()
+    {
+        endscreen.SetActive(true);
     }
 }

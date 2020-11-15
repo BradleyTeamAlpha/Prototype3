@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     
     [Tooltip("How fast the platforms should go")]
     public float speed;
+
+    [Tooltip("How much the speed should be multiplied by by each score tick")]
+    public float speedIncrease;
     
     [Tooltip("All possible platforms")]
     public List<PlatformData> platforms;
@@ -37,7 +40,9 @@ public class GameManager : MonoBehaviour
     public List<Sprite> backgrounds;
     
     #endregion
-    
+
+    [Tooltip("Reference to the UI Manager")]
+    public UIManager uiManager;
 
 
     private void Start()
@@ -68,12 +73,14 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(scoreCooldown);
             score += scoreIncrease;
+            speed *= speedIncrease;
             scoreCooldown -= scoreDecrease;
         }
     }
 
     public void EndGame()
     {
-        Debug.Log("Game ended!");
+        uiManager.EndQuiz();
+        uiManager.ShowEndgame();
     }
 }

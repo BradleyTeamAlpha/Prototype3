@@ -91,7 +91,6 @@ public class QuizManager : MonoBehaviour
     public QuestionInfo GetRandomQuestion()
     {
         int rand = Random.Range(0, questionsList.Count);
-        Debug.Log($"Rand: {rand}");
         return GetQuestion(rand);
     }
 
@@ -107,8 +106,6 @@ public class QuizManager : MonoBehaviour
         uiManager.ShowFact(fact);
         Time.timeScale = slowdownAmount;
         yield return new WaitForSecondsRealtime(pauseTime);
-        uiManager.HideFact();
-        Time.timeScale = 1;
     }
 
     /// <summary>
@@ -131,6 +128,7 @@ public class QuizManager : MonoBehaviour
     public void StartQuiz()
     {
         uiManager.ShowQuiz();
+        questionsAsked = 0;
         currentQuestion = NextQuestion();
         uiManager.UpdateQuiz(currentQuestion);
     }
@@ -142,25 +140,36 @@ public class QuizManager : MonoBehaviour
         return question;
     }
     
-    public void CheckAnswer(int answer)
+    public bool CheckAnswer(int answer)
     {
-        if (answer == currentQuestion.Correct && playerManager.timesRevived < playerManager.maxRevives)
+        return answer == currentQuestion.Correct;
+    }
+
+    public void QuestionSetup(bool isCorrect)
+    {
+        if (isCorrect)
         {
-            uiManager.EndQuiz();
-            playerManager.Revive();
+            gameManager.score += quizPoints;
+            if (playerManager.timesRevived < playerManager.maxRevives)
+            {
+                uiManager.EndQuiz();
+                playerManager.Revive();
+            }
         }
         else
         {
-            ++questionsAsked;
-            if (questionsAsked < maxQuestions)
-            {
-                currentQuestion = NextQuestion();
-                gameManager.score += quizPoints;
-            }
-            else
-            {
-                gameManager.EndGame();
-            }
+            playerManager.timesRevived = playerManager.maxRevives;
+        }
+        
+        ++questionsAsked;
+
+        if (questionsAsked < maxQuestions)
+        {
+            currentQuestion = NextQuestion();
+        }
+        else
+        {
+            gameManager.EndGame();
         }
     }
 }
