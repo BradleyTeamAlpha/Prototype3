@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: d85e86c1bf97d79499258510997483bc
+guid: 94267f88657f20c47b9aa1f70c8f6ba7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8464389048924019325
-    second: Lightning Anim_0
+      213: -6866223457527366045
+    second: Notes Anim_0
   - first:
-      213: 6700680557535187969
-    second: Lightning Anim_1
+      213: -7340887947083116644
+    second: Notes Anim_1
   - first:
-      213: -3152952946659638820
-    second: Lightning Anim_2
+      213: -1075317239482423701
+    second: Notes Anim_2
   - first:
-      213: 2461407742744496312
-    second: Lightning Anim_3
+      213: 7613345766826708285
+    second: Notes Anim_3
   - first:
-      213: 3972490511103070328
-    second: Lightning Anim_4
+      213: 6510417312696462606
+    second: Notes Anim_4
   - first:
-      213: 8145686515339668120
-    second: Lightning Anim_5
+      213: 1842221151617776535
+    second: Notes Anim_5
   - first:
-      213: -7782479711135629077
-    second: Lightning Anim_6
+      213: 5752565574904684905
+    second: Notes Anim_6
   - first:
-      213: -8318440270818729805
-    second: Lightning Anim_7
+      213: 5567661068952783514
+    second: Notes Anim_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -125,148 +125,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lightning Anim_0
+      name: Notes Anim_0
       rect:
         serializedVersion: 2
-        x: 90
-        y: 683
-        width: 135
-        height: 305
+        x: 0
+        y: 754
+        width: 209
+        height: 270
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7a92d56efc877570800000000000000
-      internalID: 8464389048924019325
+      spriteID: 36e70a9e42646b0a0800000000000000
+      internalID: -6866223457527366045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lightning Anim_1
+      name: Notes Anim_1
       rect:
         serializedVersion: 2
-        x: 309
-        y: 675
-        width: 192
-        height: 299
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 104504127799dfc50800000000000000
-      internalID: 6700680557535187969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning Anim_2
-      rect:
-        serializedVersion: 2
-        x: 594
-        y: 658
-        width: 208
-        height: 298
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd1c4d400067e34d0800000000000000
-      internalID: -3152952946659638820
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning Anim_3
-      rect:
-        serializedVersion: 2
-        x: 870
-        y: 651
-        width: 197
-        height: 299
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b88ea90d4da82220800000000000000
-      internalID: 2461407742744496312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning Anim_4
-      rect:
-        serializedVersion: 2
-        x: 1194
-        y: 698
-        width: 137
-        height: 314
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87098eb921f112730800000000000000
-      internalID: 3972490511103070328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning Anim_5
-      rect:
-        serializedVersion: 2
-        x: 1470
-        y: 699
-        width: 140
-        height: 325
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89aa28e5aba4b0170800000000000000
-      internalID: 8145686515339668120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lightning Anim_6
-      rect:
-        serializedVersion: 2
-        x: 1747
-        y: 686
+        x: 247
+        y: 772
         width: 134
-        height: 326
+        height: 236
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be08312afe31ff390800000000000000
-      internalID: -7782479711135629077
+      spriteID: c9f0a2a4e4def1a90800000000000000
+      internalID: -7340887947083116644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notes Anim_2
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 770
+        width: 28
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66ebcffaa4b311f0800000000000000
+      internalID: -1075317239482423701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notes Anim_3
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 772
+        width: 134
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d0eef33a908a960800000000000000
+      internalID: 7613345766826708285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notes Anim_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 488
+        width: 208
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d63de5d06a95a50800000000000000
+      internalID: 6510417312696462606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notes Anim_5
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 504
+        width: 134
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b73eb7062e09910800000000000000
+      internalID: 1842221151617776535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notes Anim_6
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 502
+        width: 28
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961a55779e735df40800000000000000
+      internalID: 5752565574904684905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Notes Anim_7
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 504
+        width: 133
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ac3b45e3e444d40800000000000000
+      internalID: 5567661068952783514
       vertices: []
       indices: 
       edges: []

@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: bb353afa69b54544f876c927a94b17c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2131142551720628010
+    second: Rough Jump Anim_0
+  - first:
+      213: 6231374891996092541
+    second: Rough Jump Anim_1
+  - first:
+      213: 3888956089892845067
+    second: Rough Jump Anim_2
+  - first:
+      213: 5457049362436157007
+    second: Rough Jump Anim_3
+  - first:
+      213: -1589212464660729997
+    second: Rough Jump Anim_4
+  - first:
+      213: 356543108186438269
+    second: Rough Jump Anim_5
+  - first:
+      213: 3072246502202860618
+    second: Rough Jump Anim_6
+  - first:
+      213: -4944790393116522517
+    second: Rough Jump Anim_7
+  - first:
+      213: 5818182329734077084
+    second: Rough Jump Anim_8
+  - first:
+      213: -1360363943013737883
+    second: Rough Jump Anim_9
+  - first:
+      213: 7801259889554638357
+    second: Rough Jump Anim_10
+  - first:
+      213: 666336846554388683
+    second: Rough Jump Anim_11
+  - first:
+      213: 1073616304068649337
+    second: Rough Jump Anim_12
+  - first:
+      213: -4711166901472336745
+    second: Rough Jump Anim_13
+  - first:
+      213: -6680025132144667047
+    second: Rough Jump Anim_14
+  - first:
+      213: -1780022632009587037
+    second: Rough Jump Anim_15
+  - first:
+      213: 1824353294205913998
+    second: Rough Jump Anim_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rough Jump Anim_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1489
+        width: 204
+        height: 280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f07090cd6539d10800000000000000
+      internalID: 2131142551720628010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_1
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1489
+        width: 222
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7817b3f27a4a7650800000000000000
+      internalID: 6231374891996092541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_2
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 1487
+        width: 200
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06b72d85f858f530800000000000000
+      internalID: 3888956089892845067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_3
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 1497
+        width: 192
+        height: 426
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e67c18b755bbb40800000000000000
+      internalID: 5457049362436157007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_4
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 1567
+        width: 128
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f2643feabf1f9e0800000000000000
+      internalID: -1589212464660729997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_5
+      rect:
+        serializedVersion: 2
+        x: 3329
+        y: 1643
+        width: 130
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7af09e5112b2f400800000000000000
+      internalID: 356543108186438269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_8
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1046
+        width: 158
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a114ab0065eb050800000000000000
+      internalID: 5818182329734077084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_9
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1019
+        width: 232
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a9a6b83340f1de0800000000000000
+      internalID: -1360363943013737883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_10
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 905
+        width: 104
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51648656984a34c60800000000000000
+      internalID: 7801259889554638357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_11
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 875
+        width: 150
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8d0afd4dd4f3900800000000000000
+      internalID: 666336846554388683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_12
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 887
+        width: 204
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971641d175046ee00800000000000000
+      internalID: 1073616304068649337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_13
+      rect:
+        serializedVersion: 2
+        x: 3294
+        y: 883
+        width: 188
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794e928f9a29e9eb0800000000000000
+      internalID: -4711166901472336745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_14
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 285
+        width: 174
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956d5dbd888cb43a0800000000000000
+      internalID: -6680025132144667047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rough Jump Anim_15
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 303
+        width: 272
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6a9eed8d61c47e0800000000000000
+      internalID: -1780022632009587037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
