@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7132340640765686111}
   - component: {fileID: 1926692289899816086}
   - component: {fileID: -8331520888145295260}
+  - component: {fileID: 6476428039588521603}
   m_Layer: 0
   m_Name: Laser Enemy
   m_TagString: Obstacle
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 344302337
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7611964107882714557, guid: 712301e7da01714418374fb11f756e24, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffff4ecdfcb2cc04a988922265edaa20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,8 +100,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.60110486, y: -0.08196926}
-  m_Size: {x: 2.115538, y: 4.9881883}
+  m_Offset: {x: -1.129484, y: -0.08196926}
+  m_Size: {x: 1.0587795, y: 4.9881883}
   m_Direction: 0
 --- !u!114 &7132340640765686111
 MonoBehaviour:
@@ -153,3 +154,19 @@ MonoBehaviour:
   speed: 50
   isLeft: 1
   moveLeft: 1
+--- !u!58 &6476428039588521603
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132340640765686107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.11322451, y: -1.2171588}
+  serializedVersion: 2
+  m_Radius: 0.63817894

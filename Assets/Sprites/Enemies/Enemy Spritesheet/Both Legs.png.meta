@@ -104,6 +104,9 @@ TextureImporter:
   - first:
       213: 4911843190866191112
     second: Both Legs_33
+  - first:
+      213: -2046295761002677802
+    second: Both Legs_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -206,12 +209,12 @@ TextureImporter:
       name: Both Legs_0
       rect:
         serializedVersion: 2
-        x: 1219
-        y: 8011
-        width: 1138
-        height: 935
+        x: 4762
+        y: 8095
+        width: 1098
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -227,12 +230,12 @@ TextureImporter:
       name: Both Legs_1
       rect:
         serializedVersion: 2
-        x: 4543
-        y: 8032
-        width: 1455
-        height: 1167
+        x: 1252
+        y: 8095
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -248,12 +251,12 @@ TextureImporter:
       name: Both Legs_2
       rect:
         serializedVersion: 2
-        x: 8121
-        y: 8039
-        width: 1335
-        height: 1230
+        x: 8281
+        y: 8095
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -269,12 +272,12 @@ TextureImporter:
       name: Both Legs_3
       rect:
         serializedVersion: 2
-        x: 11677
-        y: 7976
-        width: 1280
-        height: 1272
+        x: 11805
+        y: 8095
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -290,12 +293,12 @@ TextureImporter:
       name: Both Legs_4
       rect:
         serializedVersion: 2
-        x: 15065
-        y: 7948
-        width: 1490
-        height: 1363
+        x: 15285
+        y: 8095
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -311,12 +314,12 @@ TextureImporter:
       name: Both Legs_5
       rect:
         serializedVersion: 2
-        x: 18601
-        y: 7934
-        width: 1469
-        height: 1363
+        x: 18827
+        y: 8095
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -332,12 +335,12 @@ TextureImporter:
       name: Both Legs_6
       rect:
         serializedVersion: 2
-        x: 22156
-        y: 7959
-        width: 1342
-        height: 1290
+        x: 22347
+        y: 8095
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -353,12 +356,12 @@ TextureImporter:
       name: Both Legs_7
       rect:
         serializedVersion: 2
-        x: 25575
-        y: 7867
-        width: 1557
-        height: 1461
+        x: 25853
+        y: 8095
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -374,12 +377,12 @@ TextureImporter:
       name: Both Legs_8
       rect:
         serializedVersion: 2
-        x: 28929
-        y: 7915
-        width: 1725
-        height: 1365
+        x: 29387
+        y: 8095
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -395,12 +398,12 @@ TextureImporter:
       name: Both Legs_9
       rect:
         serializedVersion: 2
-        x: 952
-        y: 5615
-        width: 1580
-        height: 1413
+        x: 29387
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -416,12 +419,12 @@ TextureImporter:
       name: Both Legs_10
       rect:
         serializedVersion: 2
-        x: 4425
-        y: 5615
-        width: 1581
-        height: 1533
+        x: 25853
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -437,12 +440,12 @@ TextureImporter:
       name: Both Legs_11
       rect:
         serializedVersion: 2
-        x: 7994
-        y: 5591
-        width: 1533
-        height: 1461
+        x: 22347
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -458,12 +461,12 @@ TextureImporter:
       name: Both Legs_12
       rect:
         serializedVersion: 2
-        x: 11491
-        y: 5591
-        width: 1533
-        height: 1390
+        x: 18827
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -479,12 +482,12 @@ TextureImporter:
       name: Both Legs_13
       rect:
         serializedVersion: 2
-        x: 15012
-        y: 5711
-        width: 1629
-        height: 1341
+        x: 15285
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -500,12 +503,12 @@ TextureImporter:
       name: Both Legs_14
       rect:
         serializedVersion: 2
-        x: 18509
-        y: 5711
-        width: 1605
-        height: 1485
+        x: 11805
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -521,12 +524,12 @@ TextureImporter:
       name: Both Legs_15
       rect:
         serializedVersion: 2
-        x: 22102
-        y: 5663
-        width: 1533
-        height: 1581
+        x: 8281
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -542,12 +545,12 @@ TextureImporter:
       name: Both Legs_16
       rect:
         serializedVersion: 2
-        x: 25504
-        y: 5711
-        width: 1652
-        height: 1485
+        x: 4762
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -563,12 +566,12 @@ TextureImporter:
       name: Both Legs_17
       rect:
         serializedVersion: 2
-        x: 28881
-        y: 5711
-        width: 1796
-        height: 1509
+        x: 1252
+        y: 5919
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -584,12 +587,12 @@ TextureImporter:
       name: Both Legs_18
       rect:
         serializedVersion: 2
-        x: 904
-        y: 3603
-        width: 1581
-        height: 1509
+        x: 1252
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -605,12 +608,12 @@ TextureImporter:
       name: Both Legs_19
       rect:
         serializedVersion: 2
-        x: 4449
-        y: 3411
-        width: 1557
-        height: 1725
+        x: 4762
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -626,12 +629,12 @@ TextureImporter:
       name: Both Legs_20
       rect:
         serializedVersion: 2
-        x: 7970
-        y: 3603
-        width: 1605
-        height: 1389
+        x: 8281
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -647,12 +650,12 @@ TextureImporter:
       name: Both Legs_21
       rect:
         serializedVersion: 2
-        x: 11443
-        y: 3699
-        width: 1653
-        height: 1365
+        x: 11805
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -668,12 +671,12 @@ TextureImporter:
       name: Both Legs_22
       rect:
         serializedVersion: 2
-        x: 14844
-        y: 3699
-        width: 1797
-        height: 1389
+        x: 15279
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -689,12 +692,12 @@ TextureImporter:
       name: Both Legs_23
       rect:
         serializedVersion: 2
-        x: 18413
-        y: 3675
-        width: 1749
-        height: 1437
+        x: 18827
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -710,12 +713,12 @@ TextureImporter:
       name: Both Legs_24
       rect:
         serializedVersion: 2
-        x: 22078
-        y: 3603
-        width: 1533
-        height: 1389
+        x: 22347
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -731,12 +734,12 @@ TextureImporter:
       name: Both Legs_25
       rect:
         serializedVersion: 2
-        x: 25480
-        y: 3603
-        width: 1557
-        height: 1341
+        x: 25853
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -752,12 +755,12 @@ TextureImporter:
       name: Both Legs_26
       rect:
         serializedVersion: 2
-        x: 28881
-        y: 3555
-        width: 1773
-        height: 1533
+        x: 29387
+        y: 3764
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -773,12 +776,12 @@ TextureImporter:
       name: Both Legs_27
       rect:
         serializedVersion: 2
-        x: 832
-        y: 1423
-        width: 1653
-        height: 1485
+        x: 1252
+        y: 1594
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -794,12 +797,12 @@ TextureImporter:
       name: Both Legs_28
       rect:
         serializedVersion: 2
-        x: 4377
-        y: 1375
-        width: 1653
-        height: 1510
+        x: 4762
+        y: 1594
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -815,12 +818,12 @@ TextureImporter:
       name: Both Legs_29
       rect:
         serializedVersion: 2
-        x: 7946
-        y: 1423
-        width: 1581
-        height: 1366
+        x: 8281
+        y: 1594
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -836,12 +839,12 @@ TextureImporter:
       name: Both Legs_30
       rect:
         serializedVersion: 2
-        x: 11371
-        y: 1495
-        width: 1653
-        height: 1485
+        x: 11805
+        y: 1594
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -857,12 +860,12 @@ TextureImporter:
       name: Both Legs_31
       rect:
         serializedVersion: 2
-        x: 15084
-        y: 1423
-        width: 1485
-        height: 1509
+        x: 15285
+        y: 1594
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -878,12 +881,12 @@ TextureImporter:
       name: Both Legs_32
       rect:
         serializedVersion: 2
-        x: 18294
-        y: 1447
-        width: 1844
-        height: 1390
+        x: 18827
+        y: 1594
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -899,12 +902,12 @@ TextureImporter:
       name: Both Legs_33
       rect:
         serializedVersion: 2
-        x: 22061
-        y: 1529
-        width: 1498
-        height: 1303
+        x: 22347
+        y: 1594
+        width: 1089
+        height: 1089
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

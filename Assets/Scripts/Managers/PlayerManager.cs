@@ -26,7 +26,7 @@ public class PlayerManager : MonoBehaviour
 
             if (health <= 0)
             {
-                Death();
+                StartCoroutine(Death());
             }
         }
     }
@@ -59,6 +59,9 @@ public class PlayerManager : MonoBehaviour
     
     [Tooltip("Maximum amount of times the player can revive")]
     public int maxRevives;
+    
+    [Tooltip("Animator for the player")]
+    public Animator playerAnimator;
     #endregion
     
     [Tooltip("Reference to the Quiz manager")]
@@ -99,8 +102,10 @@ public class PlayerManager : MonoBehaviour
         }
     }
     
-    private void Death()
+    private IEnumerator Death()
     {
+        playerAnimator.SetBool("isDead", true);
+        yield return new WaitForSeconds(0.5f);
         Time.timeScale = 0;
         quizManager.StartQuiz();
     }
@@ -110,6 +115,7 @@ public class PlayerManager : MonoBehaviour
         ++timesRevived;
         Health = startHealth;
         shield = 0;
+        playerAnimator.SetBool("isDead", false);
         Time.timeScale = 1;
     }
 }

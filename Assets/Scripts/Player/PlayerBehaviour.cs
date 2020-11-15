@@ -11,6 +11,11 @@ public class PlayerBehaviour : MonoBehaviour
     private PlayerManager playerManager;
 
     /// <summary>
+    /// Reference to the animator
+    /// </summary>
+    private Animator animator;
+    
+    /// <summary>
     /// Reference to the player's rigidbody2d
     /// </summary>
     private Rigidbody2D rb;
@@ -20,11 +25,15 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool isJumping = false;
     
+    [Tooltip("Particles to play when player is hurt")]
+    public ParticleSystem hitParticles;
+    
     // Start is called before the first frame update
     void Start()
     {
         playerManager = GameObject.FindWithTag("GameController").GetComponent<PlayerManager>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,7 +45,15 @@ public class PlayerBehaviour : MonoBehaviour
         RaycastHit2D hit = Physics2D.Linecast(transform.position, linecastEnd, (1 << 8));
         if (Input.GetButtonDown("Jump") && hit.transform.CompareTag("Platform"))
         {
+            isJumping = true;
+            animator.SetTrigger("StartJump");
             rb.AddForce(new Vector2(0, jumpForce));
+        }
+
+        if (isJumping && hit != null && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+            isJumping = false;
+            animator.SetTrigger("EndJump");
         }
 
     }
@@ -45,7 +62,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("Hit player");
+            hitParticles.Play();
             playerManager.Damage(other.GetComponent<ObstacleBehaviour>().GetData().damage);
         }
     }

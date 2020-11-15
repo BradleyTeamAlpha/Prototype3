@@ -23,6 +23,7 @@ public class UIXManager : MonoBehaviour
     /// <param name="sceneName">Name of the scene to load</param>
     public void LoadScene(string sceneName)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
 
