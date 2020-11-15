@@ -5,11 +5,17 @@ using UnityEngine;
 
 public class QuizManager : MonoBehaviour
 {
-    private JSONContainer questions;
-    private JSONContainer facts;
+    [Tooltip("Reference to the GameManager")]
+    public GameManager gameManager;
+
+    [Tooltip("Refernce to the PlayerManager")]
+    public PlayerManager playerManager;
+    
+    private QuestionContainer questions;
+    private FactContainer facts;
 
     private List<string> factsList;
-    private List<string> questionsList;
+    private List<QuestionInfo> questionsList;
     public List<string> aquiredFacts = new List<string>();
 
     [Tooltip("Reference to the UI Manager.")]
@@ -20,16 +26,31 @@ public class QuizManager : MonoBehaviour
 
     [Tooltip("How much to slow down the game. 0 to completly pause")]
     public float slowdownAmount;
+
+    [Tooltip("The current question being asked")]
+    public QuestionInfo currentQuestion;
+
+    [Tooltip("How many questions to ask during the quiz")]
+    public int maxQuestions;
+
+    /// <summary>
+    /// How many questions have been asked
+    /// </summary>
+    private int questionsAsked;
+
+    [Tooltip("How many points a correct question is worth, if it does not revive")]
+    public int quizPoints = 10;
     // Start is called before the first frame update
     void Start()
     {
-        TextAsset questionData = Resources.Load("Quiz/questions") as TextAsset;
-        TextAsset factsData = Resources.Load("Quiz/facts") as TextAsset;
-        questions = JsonUtility.FromJson<JSONContainer>(questionData.text);
-        facts = JsonUtility.FromJson<JSONContainer>(factsData.text);
+        TextAsset questionData = Resources.Load<TextAsset>("Quiz/questions");
+        TextAsset factsData = Resources.Load<TextAsset>("Quiz/facts");
+        questions = JsonUtility.FromJson<QuestionContainer>(questionData.text);
+        facts = JsonUtility.FromJson<FactContainer>(factsData.text);
 
         factsList = facts.text.ToList();
-        questionsList = facts.text.ToList();
+        questionsList = questions.Questions.ToList();
+        Debug.Log(questionsList.Count);
     }
 
     /// <summary>
@@ -47,9 +68,11 @@ public class QuizManager : MonoBehaviour
     /// </summary>
     /// <param name="questionID">The location of the question to get</param>
     /// <returns>A question</returns>
-    private string GetQuestion(int questionID)
+    private QuestionInfo GetQuestion(int questionID)
     {
-        return questionsList[questionID];
+        QuestionInfo question = questionsList[questionID];
+        questionsList.RemoveAt(questionID);
+        return question;
     }
 
     /// <summary>
@@ -65,9 +88,10 @@ public class QuizManager : MonoBehaviour
     /// Return a random question from the ones possible
     /// </summary>
     /// <returns>A random question</returns>
-    public string GetRandomQuestion()
+    public QuestionInfo GetRandomQuestion()
     {
-        return GetQuestion(Random.Range(0, questionsList.Count));
+        int rand = Random.Range(0, questionsList.Count);
+        return GetQuestion(rand);
     }
 
     /// <summary>
@@ -82,8 +106,6 @@ public class QuizManager : MonoBehaviour
         uiManager.ShowFact(fact);
         Time.timeScale = slowdownAmount;
         yield return new WaitForSecondsRealtime(pauseTime);
-        uiManager.HideFact();
-        Time.timeScale = 1;
     }
 
     /// <summary>
@@ -101,5 +123,53 @@ public class QuizManager : MonoBehaviour
     public List<string> GetAquiredFacts()
     {
         return aquiredFacts;
+    }
+
+    public void StartQuiz()
+    {
+        uiManager.ShowQuiz();
+        questionsAsked = 0;
+        currentQuestion = NextQuestion();
+        uiManager.UpdateQuiz(currentQuestion);
+    }
+
+    public QuestionInfo NextQuestion()
+    {
+        QuestionInfo question = GetRandomQuestion();
+        uiManager.UpdateQuiz(question);
+        return question;
+    }
+    
+    public bool CheckAnswer(int answer)
+    {
+        return answer == currentQuestion.Correct;
+    }
+
+    public void QuestionSetup(bool isCorrect)
+    {
+        if (isCorrect)
+        {
+            gameManager.score += quizPoints;
+            if (playerManager.timesRevived < playerManager.maxRevives)
+            {
+                uiManager.EndQuiz();
+                playerManager.Revive();
+            }
+        }
+        else
+        {
+            playerManager.timesRevived = playerManager.maxRevives;
+        }
+        
+        ++questionsAsked;
+
+        if (questionsAsked < maxQuestions)
+        {
+            currentQuestion = NextQuestion();
+        }
+        else
+        {
+            gameManager.EndGame();
+        }
     }
 }

@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     
     [Tooltip("How fast the platforms should go")]
     public float speed;
+
+    [Tooltip("How much the speed should be multiplied by by each score tick")]
+    public float speedIncrease;
     
     [Tooltip("All possible platforms")]
     public List<PlatformData> platforms;
@@ -37,72 +40,16 @@ public class GameManager : MonoBehaviour
     public List<Sprite> backgrounds;
     
     #endregion
-    
-    #region Player stuff
-    /// <summary>
-    /// Player's health
-    /// </summary>
-    public float Health
-    {
-        get
-        {
-            return health;
-        }
-        set
-        {
-            health = value;
 
-            if (health > startHealth)
-            {
-                health = startHealth;
-            }
+    [Tooltip("Reference to the UI Manager")]
+    public UIManager uiManager;
 
-            if (health <= 0)
-            {
-                Death();
-            }
-        }
-    }
-
-    private float health;
-
-    public float shield;
-    
-    [Header("Player Variables")]
-    [Tooltip("Player's starting health, also their max")]
-    public int startHealth;
-
-    [Tooltip("How much health per second should be drained")]
-    public float healthDrainRate;
-
-    [Tooltip("How much the Smart Grid heals the player per press")]
-    public float healAmount;
-
-    [Tooltip("Shield icon, used to display player is shielded.")]
-    public GameObject shieldIcon;
-    
-    #endregion
 
     private void Start()
     {
-        Health = startHealth;
         StartCoroutine(ScoreSystem());
     }
 
-    private void Update()
-    {
-        Damage(healthDrainRate * Time.deltaTime);
-
-        if (shield > 0)
-        {
-            shieldIcon.SetActive(true);
-        }
-        else
-        {
-            shieldIcon.SetActive(false);
-        }
-    }
-    
     /// <summary>
     /// Picks the next platform to spawn. Can do fancy logic here
     /// </summary>
@@ -126,29 +73,14 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(scoreCooldown);
             score += scoreIncrease;
+            speed *= speedIncrease;
             scoreCooldown -= scoreDecrease;
         }
     }
 
-    private void Death()
+    public void EndGame()
     {
-        Time.timeScale = 0;
-    }
-
-    public void Damage(float amount)
-    {
-        if (shield > 0)
-        {
-            shield -= amount;
-        }
-
-        if (shield < 0)
-        {
-            Health -= shield;
-        }
-        else
-        {
-            Health -= amount;
-        }
+        uiManager.EndQuiz();
+        uiManager.ShowEndgame();
     }
 }

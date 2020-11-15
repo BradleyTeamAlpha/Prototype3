@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,12 @@ public class UIManager : MonoBehaviour
 {
     [Tooltip("Reference to the GameManager")]
     public GameManager gameManager;
+
+    [Tooltip("Reference to the Player Manager")]
+    public PlayerManager playerManager;
+
+    [Tooltip("Reference to the quiz manager")]
+    public QuizManager quizManager;
     
     [Tooltip("Reference to the Smart Grid Manager")]
     public SmartGridManager smartGrid;
@@ -25,12 +32,33 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("Parent object for the fact text")]
     public GameObject factObject;
+
+    #region Quiz Stuff
+    
+    [Tooltip("Parent object for the quiz assets")]
+    public GameObject quizObject;
+
+    [Tooltip("Text for the current question")]
+    public Text questionText;
+
+    [Tooltip("Where the answers to the question get chosen")]
+    public Dropdown answerChoices;
+
+    [Tooltip("Button that selects an answer")]
+    public Button answerSelect;
+
+    [Tooltip("Button that advances from the confirmation screen")]
+    public Button confirmationSelect;
+
+    [Tooltip("The ending panel to be shown")]
+    public GameObject endscreen;
+    #endregion
     public void BuyHealth()
     {
         if (gameManager.score >= smartGrid.cost)
         {
             gameManager.score -= smartGrid.cost;
-            gameManager.Health += gameManager.healAmount;
+            playerManager.Health += playerManager.healAmount;
         }
     }
 
@@ -59,6 +87,68 @@ public class UIManager : MonoBehaviour
 
     public void HideFact()
     {
+        Time.timeScale = 1;
         factObject.SetActive(false);
+    }
+
+    public void ShowQuiz()
+    {
+        quizObject.SetActive(true);
+    }
+
+    public void EndQuiz()
+    {
+        quizObject.SetActive(false);
+    }
+    
+    public void UpdateQuiz(QuestionInfo question)
+    {
+        answerChoices.options.Clear();
+        List<string> options = new List<string>();
+        //questionText.text = question.Question;
+        string text = question.Question + "\n";
+        char character = 'A';
+        for (int i = 0; i < question.Answers.Length; ++i)
+        {
+            text += $"{character}: {question.Answers[i]}\n";
+            options.Add(character.ToString());
+            ++character;
+        }
+        answerChoices.AddOptions(options);
+        questionText.text = text;
+    }
+    
+    
+    public void ChooseAnswer()
+    {
+        bool isCorrect = quizManager.CheckAnswer(answerChoices.value);
+
+        answerSelect.gameObject.SetActive(false);
+        confirmationSelect.gameObject.SetActive(true);
+
+        string text = quizManager.currentQuestion.Answers[quizManager.currentQuestion.Correct];
+        
+        if (isCorrect)
+        {
+            text = "Correct, the answer is " + text;
+        }
+        else
+        {
+            text = "Incorrect, the answer is " + text;
+        }
+        
+        questionText.text = text;
+    }
+
+    public void NextQuestion()
+    {
+        quizManager.QuestionSetup(quizManager.CheckAnswer(answerChoices.value));
+        confirmationSelect.gameObject.SetActive(false);
+        answerSelect.gameObject.SetActive(true);
+    }
+
+    public void ShowEndgame()
+    {
+        endscreen.SetActive(true);
     }
 }
