@@ -24,7 +24,7 @@ public class PlayerManager : MonoBehaviour
                 health = startHealth;
             }
 
-            if (health <= 0)
+            if (health <= 0 && !isReviving)
             {
                 StartCoroutine(Death());
             }
@@ -73,6 +73,11 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Particles for showing magnetization")]
     public ParticleSystem magnetParticles;
 
+    /// <summary>
+    /// Is the player reviving. True is so, false if not
+    /// </summary>
+    private bool isReviving;
+    
     /// <summary>
     /// Should the magnet particles be played. True is yes, false if no
     /// </summary>
@@ -134,10 +139,12 @@ public class PlayerManager : MonoBehaviour
 
     public void Revive()
     {
+        isReviving = true;
         ++timesRevived;
         Health = startHealth;
         shield = 0;
         playerAnimator.SetBool("isDead", false);
         Time.timeScale = 1;
+        isReviving = false;
     }
 }

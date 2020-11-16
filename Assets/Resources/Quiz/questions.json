@@ -19,7 +19,7 @@
       "Correct": 1
     },
     {
-      "Question": "How often do smart meters send data to the power company about power usage?",
+      "Question": "How often do Smart M send data to the power company about power usage?",
       "Answers": [
         "Never",
         "At night while the family is sleeping",
@@ -32,7 +32,7 @@
       "Question": "What is the difference between the Smart Grid and Smart Meters? ",
       "Answers": [
         "The Smart Grid applies to cities while Smart Meters apply to small towns.",
-        "The Smart Grid refers to the network as a whole, while Smart meters are components that are a part of the Smart Grid",
+        "The Smart Grid refers to the network as a whole, while Smart Meters are components that are a part of the Smart Grid",
         "The Smart Grid is book smart while Smart Meters are street smart.",
         "The Smart Grid and Smart Meters are interchangeable terms that mean the same thing."
       ],
