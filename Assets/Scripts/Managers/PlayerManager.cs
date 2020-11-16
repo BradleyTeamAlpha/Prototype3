@@ -107,7 +107,7 @@ public class PlayerManager : MonoBehaviour
             shouldPlayParticles = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale >= 1)
         {
             uiManager.Pause();
         }
