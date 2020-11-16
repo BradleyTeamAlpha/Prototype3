@@ -27,7 +27,10 @@ public class PlayerBehaviour : MonoBehaviour
     
     [Tooltip("Particles to play when player is hurt")]
     public ParticleSystem hitParticles;
-    
+
+    [Tooltip("Shield hit particles")]
+    public ParticleSystem shieldParticles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +65,15 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
-            hitParticles.Play();
+            if (playerManager.shield > 0)
+            {
+                shieldParticles.Play();
+            }
+            else
+            {
+                hitParticles.Play();
+            }
+            
             playerManager.Damage(other.GetComponent<ObstacleBehaviour>().GetData().damage);
         }
     }
