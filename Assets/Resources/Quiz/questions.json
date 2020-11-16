@@ -99,7 +99,7 @@
       "Question": "Is there a large amount of electrical waste in the Smart Grid?",
       "Answers": [
         "Yes, the Smart Grid is very inefficient.",
-        "Sometimes, the Smart Grid can be efficient sometimes.",
+        "Sometimes, the Smart Grid can be efficient... sometimes.",
         "No, the Smart Grid is very efficient and there is little waste."
       ],
       "Correct": 2
