@@ -58,7 +58,6 @@ public class PlayerBehaviour : MonoBehaviour
             isJumping = false;
             animator.SetTrigger("EndJump");
         }
-        
 
     }
     

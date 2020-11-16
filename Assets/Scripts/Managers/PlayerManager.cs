@@ -116,6 +116,12 @@ public class PlayerManager : MonoBehaviour
         {
             uiManager.Pause();
         }
+        
+        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            uiManager.BuyHealth();
+        }
     }
     
     public void Damage(float amount)
