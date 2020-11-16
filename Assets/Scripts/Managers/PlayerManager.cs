@@ -67,6 +67,9 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Reference to the Quiz manager")]
     public QuizManager quizManager;
 
+    [Tooltip("Reference to the UI Manager")]
+    public UIManager uiManager;
+    
     [Tooltip("Particles for showing magnetization")]
     public ParticleSystem magnetParticles;
 
@@ -102,6 +105,11 @@ public class PlayerManager : MonoBehaviour
         else
         {
             shouldPlayParticles = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            uiManager.Pause();
         }
     }
     

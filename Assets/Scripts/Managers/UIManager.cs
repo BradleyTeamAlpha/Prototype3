@@ -55,6 +55,9 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("Where the facts you have collected are displayed")]
     public Text factsText;
+
+    [Tooltip("Reference to the pause menu")]
+    public GameObject pauseMenu;
     #endregion
     public void BuyHealth()
     {
@@ -160,5 +163,17 @@ public class UIManager : MonoBehaviour
     public void ShowEndgame()
     {
         endscreen.SetActive(true);
+    }
+
+    public void Resume()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void Pause()
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
     }
 }
