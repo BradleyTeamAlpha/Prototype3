@@ -8,6 +8,11 @@ public class BatteryPowerup : PowerupBase
 
     public float healthGain;
 
+    private void Start()
+    {
+        playerManager = GameObject.FindWithTag("GameController").GetComponent<PlayerManager>();
+    }
+    
     protected override void DoPowerup()
     {
         playerManager.Health += healthGain;
