@@ -66,6 +66,14 @@ public class PlayerManager : MonoBehaviour
     
     [Tooltip("Reference to the Quiz manager")]
     public QuizManager quizManager;
+
+    [Tooltip("Particles for showing magnetization")]
+    public ParticleSystem magnetParticles;
+
+    /// <summary>
+    /// Should the magnet particles be played. True is yes, false if no
+    /// </summary>
+    private bool shouldPlayParticles = true;
     
     // Start is called before the first frame update
     void Start()
@@ -81,13 +89,19 @@ public class PlayerManager : MonoBehaviour
             Damage(healthDrainRate * Time.deltaTime);
         }
 
-        if (shield > 0)
+        shieldIcon.SetActive(shield > 0);
+        
+        if (isManget)
         {
-            shieldIcon.SetActive(true);
+            if (shouldPlayParticles)
+            {
+                magnetParticles.Play();
+                shouldPlayParticles = false;
+            }
         }
         else
         {
-            shieldIcon.SetActive(false);
+            shouldPlayParticles = true;
         }
     }
     
