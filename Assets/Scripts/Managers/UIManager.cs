@@ -52,6 +52,9 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("The ending panel to be shown")]
     public GameObject endscreen;
+
+    [Tooltip("Where the facts you have collected are displayed")]
+    public Text factsText;
     #endregion
     public void BuyHealth()
     {
@@ -93,6 +96,13 @@ public class UIManager : MonoBehaviour
 
     public void ShowQuiz()
     {
+        string text = "";
+        for (int i = 0; i < quizManager.aquiredFacts.Count; ++i)
+        {
+            text += quizManager.aquiredFacts[i] + "\n";
+        }
+
+        factsText.text = text;
         quizObject.SetActive(true);
     }
 
