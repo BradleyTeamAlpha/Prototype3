@@ -46,7 +46,7 @@ public class PlayerBehaviour : MonoBehaviour
         linecastEnd.y -= 2;
         Debug.DrawLine(transform.position, linecastEnd);
         RaycastHit2D hit = Physics2D.Linecast(transform.position, linecastEnd, (1 << 8));
-        if (Input.GetButtonDown("Jump") && hit.transform.CompareTag("Platform"))
+        if (Input.GetButtonDown("Jump") && hit.transform.CompareTag("Platform") && Time.timeScale >= 1)
         {
             isJumping = true;
             animator.SetTrigger("StartJump");
@@ -58,6 +58,7 @@ public class PlayerBehaviour : MonoBehaviour
             isJumping = false;
             animator.SetTrigger("EndJump");
         }
+        
 
     }
     
