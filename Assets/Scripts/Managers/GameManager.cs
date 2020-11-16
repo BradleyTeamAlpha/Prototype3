@@ -38,6 +38,9 @@ public class GameManager : MonoBehaviour
     
     [Tooltip("Backgrounds")]
     public List<Sprite> backgrounds;
+
+    [Tooltip("The far back backgrounds")]
+    public List<Sprite> reallyBackgrounds;
     
     #endregion
 
@@ -65,6 +68,12 @@ public class GameManager : MonoBehaviour
     {
         int randomBG = Random.Range(0, backgrounds.Count);
         return backgrounds[randomBG];
+    }
+
+    public Sprite NextReallyBackground()
+    {
+        int randomBG = Random.Range(0, backgrounds.Count);
+        return reallyBackgrounds[randomBG];
     }
 
     private IEnumerator ScoreSystem()
