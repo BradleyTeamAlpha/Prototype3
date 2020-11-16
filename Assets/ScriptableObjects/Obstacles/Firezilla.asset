@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   projectile: {fileID: 40461774606950082, guid: 8b0aaf38f6b1fc6469c2505777473846, type: 3}
-  timeBetweenShots: 2
+  timeBetweenShots: 1.5
