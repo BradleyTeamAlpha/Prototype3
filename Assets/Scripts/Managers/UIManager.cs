@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour
     #endregion
     public void BuyHealth()
     {
-        if (gameManager.score >= smartGrid.cost)
+        if (gameManager.score >= smartGrid.cost && Time.timeScale >= 1)
         {
             gameManager.score -= smartGrid.cost;
             playerManager.Health += playerManager.healAmount;
