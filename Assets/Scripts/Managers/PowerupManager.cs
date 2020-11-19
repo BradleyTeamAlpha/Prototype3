@@ -33,4 +33,9 @@ public class PowerupManager : MonoBehaviour
         yield return new WaitForSeconds(duration);
         playerManager.isManget = false;
     }
+
+    public bool GetIsSpeed()
+    {
+        return isSpeed;
+    }
 }
