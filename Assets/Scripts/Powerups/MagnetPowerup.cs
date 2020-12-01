@@ -10,6 +10,7 @@ public class MagnetPowerup : PowerupBase
     public float duration;
     private void Start()
     {
+        base.Start();
         powerupManager = GameObject.FindWithTag("GameController").GetComponent<PowerupManager>();
     }
     protected override void DoPowerup()

@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     [Header("Scrolling Variables")]
     [Tooltip("Where the backgrounds start moving from")]
     public Vector3 backgroundStart;
+
+    [Tooltip("Where the backgrounds end (where they loop)")]
+    public float backgroundEnd;
     
     [Tooltip("How fast the platforms should go")]
     public float speed;

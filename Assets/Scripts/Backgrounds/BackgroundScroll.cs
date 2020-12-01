@@ -19,10 +19,10 @@ public class BackgroundScroll : MonoBehaviour
         Vector2 newPos = transform.position;
         newPos.x -= (gameManager.speed/scrollDivisor) * Time.deltaTime;//should parallax the backgrounds
         transform.position = newPos;
-        if(transform.position.x < -19)//replace -18 with magic number of background size with Charli. Trial and error baby!
+        if(transform.position.x <= gameManager.backgroundEnd)//replace -18 with magic number of background size with Charli. Trial and error baby!
         {
-            Vector3 bgFix = new Vector3(19f, 0, 0);
-            transform.position = bgFix;//could change
+            //Vector3 bgFix = new Vector3(19f, 0, 0);
+            transform.position = gameManager.backgroundStart;
             Sprite temp = gameManager.NextBackground();
             gameObject.GetComponent<SpriteRenderer>().sprite = temp;//should set sprite to whatever game object gave-can do fancy logic in function later
         }
