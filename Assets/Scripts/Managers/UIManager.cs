@@ -157,11 +157,11 @@ public class UIManager : MonoBehaviour
         
         if (isCorrect)
         {
-            text += "\nCorrect, the answer is ";
+            text += "\n\nCorrect, the answer is ";
         }
         else
         {
-            text += "\nIncorrect, the answer is ";
+            text += "\n\nIncorrect, the answer is ";
         }
 
         text += question.Answers[quizManager.currentQuestion.Correct];
