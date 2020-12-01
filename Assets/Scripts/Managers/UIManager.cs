@@ -108,7 +108,7 @@ public class UIManager : MonoBehaviour
         string text = "";
         for (int i = 0; i < quizManager.aquiredFacts.Length; ++i)
         {
-            text += quizManager.aquiredFacts[i] + "\n";
+            text += "- " + quizManager.aquiredFacts[i] + "\n";
         }
 
         factsText.text = text;

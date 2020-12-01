@@ -41,6 +41,11 @@ public class QuizManager : MonoBehaviour
     /// </summary>
     private int questionsAsked;
 
+    /// <summary>
+    /// How many facts the player has aquired
+    /// </summary>
+    private int factsCount = 0;
+    
     [Tooltip("How many points a correct question is worth, if it does not revive")]
     public int quizPoints = 10;
     // Start is called before the first frame update
@@ -108,9 +113,10 @@ public class QuizManager : MonoBehaviour
     /// <param name="factID">Where in the list to give the fact</param>
     private IEnumerator AquireFact(int factID)
     {
+        ++factsCount;
         string fact = GetFact(factID);
         aquiredFacts[factID] = fact;
-        if (aquiredFacts.Length == 1)
+        if (factsCount <= 1)
         {
             uiManager.ShowFact(fact);
             Time.timeScale = slowdownAmount;
