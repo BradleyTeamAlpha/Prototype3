@@ -25,16 +25,16 @@ public class BackgroundScroll : MonoBehaviour
         newPos.x -= (gameManager.speed/scrollDivisor) * Time.deltaTime;//should parallax the backgrounds
         transform.position = newPos;
         Vector3 screenPoint = mainCamera.WorldToViewportPoint(transform.position);
-        if(transform.position.x <= gameManager.backgroundEnd)//replace -18 with magic number of background size with Charli. Trial and error baby!
-        //if (screenPoint.x < -0.55f)
+        //if(transform.position.x <= gameManager.backgroundEnd)//replace -18 with magic number of background size with Charli. Trial and error baby!
+        if (screenPoint.x <= -0.55f)
         {
             //Vector3 bgFix = new Vector3(19f, 0, 0);
-            transform.position = gameManager.backgroundStart;
-            //Vector2 viewportPoint = Vector2.right;
-            //viewportPoint.x += 0.7f;
-            //viewportPoint.y = 0.5f;
-            //Vector3 loopPos = mainCamera.ViewportToWorldPoint(viewportPoint);
-            //transform.position = loopPos;
+            //transform.position = gameManager.backgroundStart;
+            Vector2 viewportPoint = Vector2.right;
+            viewportPoint.x += 0.62f;
+            viewportPoint.y = 0.5f;
+            Vector3 loopPos = mainCamera.ViewportToWorldPoint(viewportPoint);
+            transform.position = loopPos;
             Sprite temp = gameManager.NextBackground();
             gameObject.GetComponent<SpriteRenderer>().sprite = temp;//should set sprite to whatever game object gave-can do fancy logic in function later
         }
