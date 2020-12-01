@@ -50,7 +50,8 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Reference to the PowerupManager")]
     public PowerupManager powerupManager;
-    
+
+    private int previousPlatform;
     #endregion
 
     [Tooltip("Reference to the UI Manager")]
@@ -63,13 +64,21 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Picks the next platform to spawn. Can do fancy logic here
+    /// Picks the next platform to spawn. Can do fancy logic here. Platform 5 cannot be next to Platform 7,
+    /// 7 cannot be after 10
     /// </summary>
     /// <returns>The next platform to spawn</returns>
     public PlatformData NextPlatform()
     {
         int rand = Random.Range(0, platforms.Count);
 
+        if ((previousPlatform == 4 && rand == 6) || (rand == 4 && previousPlatform == 6) 
+            || previousPlatform == 9 && rand == 6)
+        {
+            rand -= 1;
+        }
+
+        previousPlatform = rand;
         return platforms[rand];
     }
 

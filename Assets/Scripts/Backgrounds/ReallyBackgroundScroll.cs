@@ -6,7 +6,7 @@ public class ReallyBackgroundScroll : MonoBehaviour
 {
     [Tooltip("How much to slow the background down by")]
     public float scrollDivisor;
-    // Start is called before the first frame update
+    
     private GameManager gameManager;
     void Start()
     {
