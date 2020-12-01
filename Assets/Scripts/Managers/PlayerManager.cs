@@ -19,6 +19,12 @@ public class PlayerManager : MonoBehaviour
         {
             health = value;
 
+            if (Time.timeScale <= 0)
+            {
+                Debug.Log("Time stopped, returning");
+                return;
+            }
+
             if (health > startHealth)
             {
                 health = startHealth;
@@ -92,7 +98,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Health > 0)
+        if (Time.timeScale > 0 && Health > 0)
         {
             Damage(healthDrainRate * Time.deltaTime);
         }
@@ -126,6 +132,11 @@ public class PlayerManager : MonoBehaviour
     
     public void Damage(float amount)
     {
+        if (isReviving)
+        {
+            return;
+        }
+        
         if (shield > 0)
         {
             shield -= amount;
@@ -147,7 +158,7 @@ public class PlayerManager : MonoBehaviour
     {
         isReviving = true;
         ++timesRevived;
-        Health = startHealth;
+        health = startHealth;
         shield = 0;
         playerAnimator.SetBool("isDead", false);
         Time.timeScale = 1;

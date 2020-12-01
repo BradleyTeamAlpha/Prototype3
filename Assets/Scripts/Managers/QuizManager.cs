@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class QuizManager : MonoBehaviour
 {
@@ -14,10 +16,11 @@ public class QuizManager : MonoBehaviour
     private QuestionContainer questions;
     private FactContainer facts;
 
-    private List<string> factsList;
+    private string[] factsList;
     private List<QuestionInfo> questionsList;
-    public List<string> aquiredFacts = new List<string>();
-
+    public string[] aquiredFacts;
+    private List<int> factsLeft = new List<int>();
+    
     [Tooltip("Reference to the UI Manager.")]
     public UIManager uiManager;
 
@@ -38,6 +41,11 @@ public class QuizManager : MonoBehaviour
     /// </summary>
     private int questionsAsked;
 
+    /// <summary>
+    /// How many facts the player has aquired
+    /// </summary>
+    private int factsCount = 0;
+    
     [Tooltip("How many points a correct question is worth, if it does not revive")]
     public int quizPoints = 10;
     // Start is called before the first frame update
@@ -48,9 +56,14 @@ public class QuizManager : MonoBehaviour
         questions = JsonUtility.FromJson<QuestionContainer>(questionData.text);
         facts = JsonUtility.FromJson<FactContainer>(factsData.text);
 
-        factsList = facts.text.ToList();
+        factsList = facts.text.ToArray();
         questionsList = questions.Questions.ToList();
-        Debug.Log(questionsList.Count);
+        Array.Resize(ref aquiredFacts, factsList.Length);
+        for (int i = 0; i < factsList.Length; ++i)
+        {
+            factsLeft.Add(i);
+        }
+        //Debug.Log(questionsList.Count);
     }
 
     /// <summary>
@@ -81,7 +94,7 @@ public class QuizManager : MonoBehaviour
     /// <returns>A random question</returns>
     public string GetRandomFact()
     {
-        return GetFact(Random.Range(0, factsList.Count));
+        return GetFact(Random.Range(0, factsList.Length));
     }
 
     /// <summary>
@@ -100,11 +113,19 @@ public class QuizManager : MonoBehaviour
     /// <param name="factID">Where in the list to give the fact</param>
     private IEnumerator AquireFact(int factID)
     {
+        ++factsCount;
         string fact = GetFact(factID);
-        factsList.RemoveAt(factID);
-        aquiredFacts.Add(fact);
-        uiManager.ShowFact(fact);
-        Time.timeScale = slowdownAmount;
+        aquiredFacts[factID] = fact;
+        if (factsCount <= 1)
+        {
+            uiManager.ShowFact(fact);
+            Time.timeScale = slowdownAmount;
+        }
+        else
+        {
+            StartCoroutine(uiManager.ShowNotification());
+        }
+        
         yield return new WaitForSecondsRealtime(pauseTime);
     }
 
@@ -113,14 +134,16 @@ public class QuizManager : MonoBehaviour
     /// </summary>
     public void AquireRandomFact()
     {
-        StartCoroutine(AquireFact(Random.Range(0, factsList.Count)));
+        int factID = Random.Range(0, factsLeft.Count);
+        StartCoroutine(AquireFact(factsLeft[factID]));
+        factsLeft.RemoveAt(factID);
     }
 
     /// <summary>
     /// Get what facts the player has aquired
     /// </summary>
-    /// <returns>A list of all facts the player has</returns>
-    public List<string> GetAquiredFacts()
+    /// <returns>An array of all facts the player has</returns>
+    public string[] GetAquiredFacts()
     {
         return aquiredFacts;
     }

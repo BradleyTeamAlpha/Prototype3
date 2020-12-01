@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     [Header("Scrolling Variables")]
     [Tooltip("Where the backgrounds start moving from")]
     public Vector3 backgroundStart;
+
+    [Tooltip("Where the backgrounds end (where they loop)")]
+    public float backgroundEnd;
     
     [Tooltip("How fast the platforms should go")]
     public float speed;
@@ -41,6 +44,12 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("The far back backgrounds")]
     public List<Sprite> reallyBackgrounds;
+
+    [Tooltip("The fastest the game can go")]
+    public float maxSpeed;
+
+    [Tooltip("Reference to the PowerupManager")]
+    public PowerupManager powerupManager;
     
     #endregion
 
@@ -78,11 +87,18 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator ScoreSystem()
     {
+        Debug.Log("Starting score system!");
         while(true)
         {
             yield return new WaitForSeconds(scoreCooldown);
             score += scoreIncrease;
-            speed *= speedIncrease;
+            if (speed < maxSpeed && !powerupManager.GetIsSpeed())
+            {
+                Debug.Log("Increasing speed!");
+                speed *= speedIncrease;
+            }
+            
+            Debug.Log("Increasing score!");
             scoreCooldown -= scoreDecrease;
         }
     }

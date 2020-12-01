@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FactPowerup : PowerupBase
 {
@@ -13,6 +11,7 @@ public class FactPowerup : PowerupBase
     public int scoreIncrease;
     private void Start()
     {
+        base.Start();
         quizManager = GameObject.FindWithTag("GameController").GetComponent<QuizManager>();
         gameManager = GameObject.FindWithTag("GameController").GetComponent<GameManager>();
     }

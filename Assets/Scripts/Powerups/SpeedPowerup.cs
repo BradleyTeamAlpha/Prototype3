@@ -22,6 +22,7 @@ public class SpeedPowerup : PowerupBase
     public float boostMultiplier;
     private void Start()
     {
+        base.Start();
         manager = GameObject.FindWithTag("GameController").GetComponent<PowerupManager>();
     }
     

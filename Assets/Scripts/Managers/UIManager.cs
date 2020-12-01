@@ -33,6 +33,12 @@ public class UIManager : MonoBehaviour
     [Tooltip("Parent object for the fact text")]
     public GameObject factObject;
 
+    [Tooltip("Notification to show when facts are collected")]
+    public GameObject factNotification;
+
+    [Tooltip("How long to show the notification for")]
+    public float notificationTime;
+    
     #region Quiz Stuff
     
     [Tooltip("Parent object for the quiz assets")]
@@ -61,7 +67,7 @@ public class UIManager : MonoBehaviour
     #endregion
     public void BuyHealth()
     {
-        if (gameManager.score >= smartGrid.cost)
+        if (gameManager.score >= smartGrid.cost && Time.timeScale >= 1)
         {
             gameManager.score -= smartGrid.cost;
             playerManager.Health += playerManager.healAmount;
@@ -100,9 +106,9 @@ public class UIManager : MonoBehaviour
     public void ShowQuiz()
     {
         string text = "";
-        for (int i = 0; i < quizManager.aquiredFacts.Count; ++i)
+        for (int i = 0; i < quizManager.aquiredFacts.Length; ++i)
         {
-            text += quizManager.aquiredFacts[i] + "\n";
+            text += "- " + quizManager.aquiredFacts[i] + "\n\n";
         }
 
         factsText.text = text;
@@ -130,7 +136,13 @@ public class UIManager : MonoBehaviour
         answerChoices.AddOptions(options);
         questionText.text = text;
     }
-    
+
+    public IEnumerator ShowNotification()
+    {
+        factNotification.SetActive(true);
+        yield return  new WaitForSeconds(notificationTime);
+        factNotification.SetActive(false);
+    }
     
     public void ChooseAnswer()
     {
@@ -138,17 +150,21 @@ public class UIManager : MonoBehaviour
 
         answerSelect.gameObject.SetActive(false);
         confirmationSelect.gameObject.SetActive(true);
-
-        string text = quizManager.currentQuestion.Answers[quizManager.currentQuestion.Correct];
+        answerChoices.gameObject.SetActive(false);
+        
+        QuestionInfo question = quizManager.currentQuestion;
+        string text = question.Question;
         
         if (isCorrect)
         {
-            text = "Correct, the answer is " + text;
+            text += "\nCorrect, the answer is ";
         }
         else
         {
-            text = "Incorrect, the answer is " + text;
+            text += "\nIncorrect, the answer is ";
         }
+
+        text += question.Answers[quizManager.currentQuestion.Correct];
         
         questionText.text = text;
     }
