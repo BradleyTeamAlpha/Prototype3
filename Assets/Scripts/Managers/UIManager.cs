@@ -108,7 +108,7 @@ public class UIManager : MonoBehaviour
         string text = "";
         for (int i = 0; i < quizManager.aquiredFacts.Length; ++i)
         {
-            text += "- " + quizManager.aquiredFacts[i] + "\n\n";
+            text += "- " + quizManager.aquiredFacts[i] + "\n";
         }
 
         factsText.text = text;
@@ -150,8 +150,7 @@ public class UIManager : MonoBehaviour
 
         answerSelect.gameObject.SetActive(false);
         confirmationSelect.gameObject.SetActive(true);
-        answerChoices.gameObject.SetActive(false);
-        
+
         QuestionInfo question = quizManager.currentQuestion;
         string text = question.Question;
         
