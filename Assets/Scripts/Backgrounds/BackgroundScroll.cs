@@ -7,6 +7,8 @@ public class BackgroundScroll : MonoBehaviour
     [Tooltip("How much to slow the background down by")]
     public float scrollDivisor;
 
+    public Transform otherBackground;
+    
     private GameManager gameManager;
 
     private Camera mainCamera;
@@ -26,11 +28,13 @@ public class BackgroundScroll : MonoBehaviour
         //if(transform.position.x <= gameManager.backgroundEnd)//replace -18 with magic number of background size with Charli. Trial and error baby!
         if (screenPoint.x <= -0.55f)
         {
-            Vector2 viewportPoint = Vector2.right;
-            viewportPoint.x += 0.605f;
-            viewportPoint.y = 0.55f;
-            Vector3 loopPos = mainCamera.ViewportToWorldPoint(viewportPoint);
-            transform.position = loopPos;
+            //Vector2 viewportPoint = Vector2.right;
+            //viewportPoint.x += 0.605f;
+            //viewportPoint.y = 0.55f;
+            //Vector3 loopPos = mainCamera.ViewportToWorldPoint(viewportPoint);
+            Vector2 endPos = otherBackground.position;
+            endPos.x += 19.18f;
+            transform.position = endPos;
             Sprite temp = gameManager.NextBackground();
             gameObject.GetComponent<SpriteRenderer>().sprite = temp;//should set sprite to whatever game object gave-can do fancy logic in function later
         }
