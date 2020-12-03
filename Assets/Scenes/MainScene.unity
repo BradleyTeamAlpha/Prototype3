@@ -3293,7 +3293,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2031902665
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8598654887635326915, guid: 4786ef610d41db14f99e3d0a5af34a3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3940,18 +3940,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1185653639}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: BuyHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 935195285}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5324,6 +5312,7 @@ MonoBehaviour:
   factObject: {fileID: 1339156510}
   factNotification: {fileID: 2097666236}
   notificationTime: 3
+  buySound: {fileID: 935195285}
   quizObject: {fileID: 2032816187}
   questionText: {fileID: 163461203}
   answerChoices: {fileID: 772676400}
@@ -5442,6 +5431,9 @@ MonoBehaviour:
   maxSpeed: 11.2
   powerupManager: {fileID: 1185653644}
   uiManager: {fileID: 1185653639}
+  flyingBackgroundObjects:
+  - {fileID: 5683628334341762262, guid: 4afd68105269dc94e90f320144932b57, type: 3}
+  - {fileID: 3824565885917513000, guid: b4885b1a116cf2041a6e5a343d91960b, type: 3}
 --- !u!114 &1185653644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11411,7 +11403,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2031902665
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8598654887635326915, guid: 4786ef610d41db14f99e3d0a5af34a3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

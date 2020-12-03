@@ -38,6 +38,9 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("How long to show the notification for")]
     public float notificationTime;
+
+    [Tooltip("Sound to play when buying health")]
+    public AudioSource buySound;
     
     #region Quiz Stuff
     
@@ -71,6 +74,7 @@ public class UIManager : MonoBehaviour
         {
             gameManager.score -= smartGrid.cost;
             playerManager.Health += playerManager.healAmount;
+            buySound.Play();
         }
     }
 
