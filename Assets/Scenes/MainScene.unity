@@ -3486,6 +3486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollDivisor: 2
+  otherBackground: {fileID: 1492381391}
 --- !u!212 &785743710
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17084,6 +17085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollDivisor: 2
+  otherBackground: {fileID: 785743708}
 --- !u!212 &1492381393
 SpriteRenderer:
   m_ObjectHideFlags: 0
