@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         int rand = Random.Range(0, platforms.Count);
 
         if ((previousPlatform == 4 && rand == 6) || (rand == 4 && previousPlatform == 6) 
-            || previousPlatform == 9 && rand == 6)
+            || previousPlatform == 9 && rand == 6 || previousPlatform == 8 && rand == 4)
         {
             rand -= 1;
         }
