@@ -29,7 +29,7 @@ public class PowerupBase : MonoBehaviour
 
     protected virtual void DoPowerup()
     {
-        
+        Destroy(gameObject);
     }
     
     protected void Update()
