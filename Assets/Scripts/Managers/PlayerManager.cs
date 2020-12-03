@@ -17,6 +17,12 @@ public class PlayerManager : MonoBehaviour
         }
         set
         {
+
+            if (value > health)
+            {
+                healParticles.Play();
+            }
+
             health = value;
 
             if (isReviving || Time.timeScale <= 0)
@@ -82,6 +88,9 @@ public class PlayerManager : MonoBehaviour
     [Tooltip("Particles for showing magnetization")]
     public ParticleSystem magnetParticles;
 
+    [Tooltip("Particles for when the player heals")]
+    public ParticleSystem healParticles;
+    
     private bool isDead = false;
     
     /// <summary>
