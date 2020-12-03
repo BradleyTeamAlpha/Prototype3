@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5659620498805927237}
   - component: {fileID: 5659620498805927239}
   - component: {fileID: 5659620498805927288}
+  - component: {fileID: 387231951}
   m_Layer: 10
   m_Name: CoinPowerup
   m_TagString: Untagged
@@ -114,3 +115,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floatSpeed: 5
   amount: 25
+--- !u!95 &387231951
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5659620498805927236}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0243793f1cdd8ff418bda15698681d61, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
