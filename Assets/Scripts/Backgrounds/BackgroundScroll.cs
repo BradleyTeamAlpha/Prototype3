@@ -33,7 +33,7 @@ public class BackgroundScroll : MonoBehaviour
             //viewportPoint.y = 0.55f;
             //Vector3 loopPos = mainCamera.ViewportToWorldPoint(viewportPoint);
             Vector2 endPos = otherBackground.position;
-            endPos.x += 19.18f;
+            endPos.x += 19.15f;
             transform.position = endPos;
             Sprite temp = gameManager.NextBackground();
             gameObject.GetComponent<SpriteRenderer>().sprite = temp;//should set sprite to whatever game object gave-can do fancy logic in function later
