@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
         {
             health = value;
 
-            if (Time.timeScale <= 0)
+            if (isReviving || Time.timeScale <= 0)
             {
                 Debug.Log("Time stopped, returning");
                 return;
@@ -30,7 +30,7 @@ public class PlayerManager : MonoBehaviour
                 health = startHealth;
             }
 
-            if (health <= 0 && !isReviving)
+            if (health <= 0 && !isReviving && !isDead)
             {
                 StartCoroutine(Death());
             }
@@ -75,10 +75,15 @@ public class PlayerManager : MonoBehaviour
 
     [Tooltip("Reference to the UI Manager")]
     public UIManager uiManager;
+
+    [Tooltip("Reference to the GameMananger")]
+    public GameManager gameManager;
     
     [Tooltip("Particles for showing magnetization")]
     public ParticleSystem magnetParticles;
 
+    private bool isDead = false;
+    
     /// <summary>
     /// Is the player reviving. True is so, false if not
     /// </summary>
@@ -148,19 +153,25 @@ public class PlayerManager : MonoBehaviour
     
     private IEnumerator Death()
     {
+        Debug.Log("Player died!");
+        isDead = true;
         playerAnimator.SetBool("isDead", true);
-        yield return new WaitForSeconds(0.5f);
+        gameManager.speed = 0;
+        yield return new WaitForSeconds(1f);
         Time.timeScale = 0;
         quizManager.StartQuiz();
     }
 
     public void Revive()
     {
+        Debug.Log("Player Reviving!");
         isReviving = true;
+        isDead = false;
         ++timesRevived;
         health = startHealth;
         shield = 0;
         playerAnimator.SetBool("isDead", false);
+        gameManager.speed = 5;
         Time.timeScale = 1;
         isReviving = false;
     }

@@ -20,5 +20,6 @@ public class FactPowerup : PowerupBase
     {
         gameManager.score += scoreIncrease;
         quizManager.AquireRandomFact();
+        base.DoPowerup();
     }
 }
