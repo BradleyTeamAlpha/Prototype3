@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class FactPowerup : PowerupBase
 {
@@ -19,7 +20,15 @@ public class FactPowerup : PowerupBase
     protected override void DoPowerup()
     {
         gameManager.score += scoreIncrease;
-        quizManager.AquireRandomFact();
+        try
+        {
+            quizManager.AquireRandomFact();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Ran out of facts!");
+        }
+
         base.DoPowerup();
     }
 }

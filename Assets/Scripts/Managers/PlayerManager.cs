@@ -43,7 +43,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private float health;
+    private float health = 100;
 
     public float shield;
     
@@ -90,6 +90,12 @@ public class PlayerManager : MonoBehaviour
 
     [Tooltip("Particles for when the player heals")]
     public ParticleSystem healParticles;
+
+    [Tooltip("Can the player buy health")]
+    public bool canBuy = true;
+
+    [Tooltip("Buying health cooldown in seconds")]
+    public float buyCooldown;
     
     private bool isDead = false;
     
@@ -183,5 +189,14 @@ public class PlayerManager : MonoBehaviour
         gameManager.speed = 5;
         Time.timeScale = 1;
         isReviving = false;
+    }
+
+    public IEnumerator SetBuyCooldown()
+    {
+        canBuy = false;
+        uiManager.HideBuyButton();
+        yield return new WaitForSeconds(buyCooldown);
+        uiManager.ShowBuyButton();
+        canBuy = true;
     }
 }

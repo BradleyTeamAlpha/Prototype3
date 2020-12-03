@@ -43,11 +43,12 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         Vector2 linecastEnd = transform.position;
-        linecastEnd.y -= 1.3f;
+        linecastEnd.y -= 1.2f;
         Debug.DrawLine(transform.position, linecastEnd);
         RaycastHit2D hit = Physics2D.Linecast(transform.position, linecastEnd, (1 << 8));
         if (Input.GetButtonDown("Jump") && hit.transform.CompareTag("Platform") && Time.timeScale >= 1)
         {
+            Debug.Log("Jumping!");
             isJumping = true;
             animator.SetTrigger("StartJump");
             rb.AddForce(new Vector2(0, jumpForce));

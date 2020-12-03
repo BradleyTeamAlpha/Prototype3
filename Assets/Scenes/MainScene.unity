@@ -10990,6 +10990,7 @@ MonoBehaviour:
   factNotification: {fileID: 2097666236}
   notificationTime: 3
   buySound: {fileID: 935195285}
+  buyHealthButton: {fileID: 877180221}
   quizObject: {fileID: 2032816187}
   questionText: {fileID: 163461203}
   answerChoices: {fileID: 772676400}
@@ -11068,6 +11069,8 @@ MonoBehaviour:
   gameManager: {fileID: 1185653643}
   magnetParticles: {fileID: 1378523204}
   healParticles: {fileID: 1157147037}
+  canBuy: 1
+  buyCooldown: 5
 --- !u!114 &1185653643
 MonoBehaviour:
   m_ObjectHideFlags: 0

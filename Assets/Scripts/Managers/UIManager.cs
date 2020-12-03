@@ -41,6 +41,9 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("Sound to play when buying health")]
     public AudioSource buySound;
+
+    [Tooltip("The button that allows health to be bought")]
+    public GameObject buyHealthButton;
     
     #region Quiz Stuff
     
@@ -70,10 +73,11 @@ public class UIManager : MonoBehaviour
     #endregion
     public void BuyHealth()
     {
-        if (gameManager.score >= smartGrid.cost && Time.timeScale >= 1)
+        if (gameManager.score >= smartGrid.cost && Time.timeScale >= 1 && playerManager.canBuy)
         {
             gameManager.score -= smartGrid.cost;
             playerManager.Health += playerManager.healAmount;
+            StartCoroutine(playerManager.SetBuyCooldown());
             buySound.Play();
         }
     }
@@ -87,6 +91,10 @@ public class UIManager : MonoBehaviour
 
     private void UpdateColor()
     {
+        if (!playerManager.canBuy)
+        {
+            return;
+        }
         Color newColor = smartMeterColor.color;
 
         // Conversion to float to make sure decimals happen
@@ -195,5 +203,16 @@ public class UIManager : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void HideBuyButton()
+    {
+        smartMeterColor.color = Color.black;
+        buyHealthButton.SetActive(false);
+    }
+
+    public void ShowBuyButton()
+    {
+        buyHealthButton.SetActive(true);
     }
 }
