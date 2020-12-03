@@ -57,10 +57,13 @@ public class GameManager : MonoBehaviour
     [Tooltip("Reference to the UI Manager")]
     public UIManager uiManager;
 
+    [Tooltip("Objects that move between the far background and the close background")]
+    public GameObject[] flyingBackgroundObjects;
 
     private void Start()
     {
         StartCoroutine(ScoreSystem());
+        StartCoroutine(SpawnBackgroundObjects());
     }
 
     /// <summary>
@@ -116,5 +119,17 @@ public class GameManager : MonoBehaviour
     {
         uiManager.EndQuiz();
         uiManager.ShowEndgame();
+    }
+
+    private IEnumerator SpawnBackgroundObjects()
+    {
+        while (true)
+        {
+            int rand = Random.Range(0, flyingBackgroundObjects.Length);
+            Vector2 spawnLocation = backgroundStart;
+            spawnLocation.y = Random.Range(0, 5);
+            Instantiate(flyingBackgroundObjects[rand], spawnLocation, Quaternion.identity);
+            yield return new WaitForSeconds(Random.Range(0.5f, 10));
+        }
     }
 }
