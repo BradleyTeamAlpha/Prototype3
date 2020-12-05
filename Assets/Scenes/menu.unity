@@ -2190,8 +2190,8 @@ MonoBehaviour:
 
     Esc: Pause Menu
 
-    On "Continue" in Notes Pop-up: either click or
-    hit space (with the exception of the first note space won''t work). '
+    On "Continue" in Notes Pop-up: either click or hit
+    space (with the exception of the first note space won''t work). '
 --- !u!222 &993577950
 CanvasRenderer:
   m_ObjectHideFlags: 0
