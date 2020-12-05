@@ -142,5 +142,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedf21372f955be4eba710ea396e1f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatSpeed: 0
+  floatSpeed: 5
   scoreIncrease: 5
