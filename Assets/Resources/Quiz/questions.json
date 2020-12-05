@@ -3,17 +3,17 @@
     {
       "Question": "What is the difference between a Smart Meter and a Standard Power Meter?",
       "Answers": [
-        "A Standard Power Meter collects data like a smart meter does, but needs to be checked manually instead of automatically.",
-        "A Standard Power Meter is stronger and can handle more energy than a smart meter.",
-        "Smart Meters follow the metric system while Standard Power Meters follow the Imperial system"
+        "Standard Power Meters collect data like a smart meter does, but need to be checked manually instead of automatically.",
+        "Standard Power Meters are stronger and can handle more energy than smart meters.",
+        "Smart Meters follow the metric system while Standard Power Meters follow the Imperial system."
       ],
       "Correct": 0
     },
     {
-      "Question": "What is a Power Meter?",
+      "Question": "What do Power Meters do?",
       "Answers": [
-        "A Power Meter measures the amount of strength between different electrical currents.",
-        "A Power Meter reads the amount of electrical power used by a home, business, or device.",
+        "Power Meters measure the amount of strength between different electrical currents.",
+        "Power Meters read the amount of electrical power used by a home, business, or device.",
         "A Power Meter is the part of a user interface that describes how much health your character has."
       ],
       "Correct": 1
