@@ -1764,8 +1764,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Objects in Game:\r \n\nCoins - use to buy health.\r \n\nBatteries - recharge
     smart meter\r.\n\nFence and Mini \"Dinos\" - Will hurt you if you crash into
-    them\r\n\nShield - protects you from damage\r\n\nMagnet - attracts coins and
-    batteries"
+    them\r\n\nShield - protects you from damage\r\n\nMagnet - attracts all powerups"
 --- !u!222 &697673129
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4171,7 +4170,7 @@ MonoBehaviour:
   m_Text: 'Quiz:
 
     Pick up facts that are lying around! They will help with your
-    quiz. If you run out of health, you''ll be quizzed. If you do well! you can continue!
+    quiz. If you run out of health, you''ll be quizzed. If you do well, you can continue!
 
 
 
@@ -4180,7 +4179,7 @@ MonoBehaviour:
     SmartGrid:
 
     Use
-    the Smartgrid to buy health. After buying health, there will be a cool down time
+    the SmartGrid to buy health. After buying health, there will be a cool down time
     where you will have to wait to buy more.'
 --- !u!222 &1658962276
 CanvasRenderer:

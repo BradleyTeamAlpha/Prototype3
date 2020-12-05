@@ -44,6 +44,9 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("The button that allows health to be bought")]
     public GameObject buyHealthButton;
+
+    [Tooltip("Text for the pause menu facts")]
+    public Text pauseFactText;
     
     #region Quiz Stuff
     
@@ -107,6 +110,7 @@ public class UIManager : MonoBehaviour
     {
         factObject.SetActive(true);
         factText.text = fact;
+        UpdateCollectedFactsText(pauseFactText);
     }
 
     public void HideFact()
@@ -117,16 +121,21 @@ public class UIManager : MonoBehaviour
 
     public void ShowQuiz()
     {
+        UpdateCollectedFactsText(factsText);
+        quizObject.SetActive(true);
+    }
+
+    private void UpdateCollectedFactsText(Text textToUpdate)
+    {
         string text = "";
         for (int i = 0; i < quizManager.aquiredFacts.Length; ++i)
         {
             text += "- " + quizManager.aquiredFacts[i] + "\n\n";
         }
 
-        factsText.text = text;
-        quizObject.SetActive(true);
+        textToUpdate.text = text;
     }
-
+    
     public void EndQuiz()
     {
         quizObject.SetActive(false);
@@ -151,6 +160,7 @@ public class UIManager : MonoBehaviour
 
     public IEnumerator ShowNotification()
     {
+        UpdateCollectedFactsText(pauseFactText);
         factNotification.SetActive(true);
         yield return  new WaitForSeconds(notificationTime);
         factNotification.SetActive(false);
