@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.2749237, g: 0.034603007, b: 0.6792453, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -702,7 +702,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 5
 --- !u!114 &105755736
 MonoBehaviour:
@@ -1981,7 +1981,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -4039,7 +4039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5048317876730352733, guid: 65aa9e7287645c945975dd2b767099c5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.6576
+      value: 17.6609
       objectReference: {fileID: 0}
     - target: {fileID: 5048317876730352733, guid: 65aa9e7287645c945975dd2b767099c5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11088,7 +11088,7 @@ MonoBehaviour:
   scoreCooldown: 5
   scoreDecrease: 0.01
   scoreIncrease: 10
-  backgroundStart: {x: 21, y: 0, z: 0}
+  backgroundStart: {x: 20, y: 0, z: 0}
   backgroundEnd: -22.9506
   speed: 5
   speedIncrease: 1.05
@@ -11104,6 +11104,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e3574832093716d49bcdd4b9331216e0, type: 2}
   - {fileID: 11400000, guid: c3cdc98157e128649a5ee6a7020cf7fa, type: 2}
   - {fileID: 11400000, guid: 2949dc43f5a3f474492042b7ad39cf79, type: 2}
+  - {fileID: 11400000, guid: 646a5315c6c383d4ba0821f51c3dda0f, type: 2}
   backgrounds:
   - {fileID: 21300000, guid: 62e9ddb49d823d34abb696f6ade2f10f, type: 3}
   - {fileID: 21300000, guid: 62e9ddb49d823d34abb696f6ade2f10f, type: 3}
@@ -18656,8 +18657,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 234, y: 201}
-  m_SizeDelta: {x: 39.6, y: 30}
+  m_AnchoredPosition: {x: 216.87, y: 201}
+  m_SizeDelta: {x: 80.90816, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841104390
 MonoBehaviour:
@@ -18681,7 +18682,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10

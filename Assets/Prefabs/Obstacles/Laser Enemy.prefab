@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1926692289899816086}
   - component: {fileID: -8331520888145295260}
   - component: {fileID: 6476428039588521603}
+  - component: {fileID: -3883212443643557071}
   m_Layer: 0
   m_Name: Laser Enemy
   m_TagString: Obstacle
@@ -170,3 +171,22 @@ CircleCollider2D:
   m_Offset: {x: 0.11322451, y: -1.2171588}
   serializedVersion: 2
   m_Radius: 0.63817894
+--- !u!95 &-3883212443643557071
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7132340640765686107}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3910b5b389029374ca074a79d89794b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

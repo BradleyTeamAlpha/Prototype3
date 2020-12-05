@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 40461774606950084}
   - component: {fileID: 40461774606950083}
   - component: {fileID: -2690455514461524901}
+  - component: {fileID: 7100171386565037258}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Obstacle
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 344302337
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6607481912129624618, guid: 9f6fdc5b9258b5141a030f089b61b05a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1572a8782a8d7384db8c11246d68088b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,3 +115,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: ba6527a323a51264e8e9d488f657acae, type: 2}
   speed: 10
+--- !u!95 &7100171386565037258
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40461774606950082}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60eb4c98a595f13449d92e5335204d94, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
