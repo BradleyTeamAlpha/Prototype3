@@ -1,7 +1,7 @@
 {
   "Questions": [
     {
-      "Question": "What is the difference between a Smart Meter and a Standard Power Meter?",
+      "Question": "What is the difference between a Smart Meter and a Standard Power Meter?\n",
       "Answers": [
         "Standard Power Meters collect data like a Smart Meter does, but need to be checked manually instead of automatically.",
         "Standard Power Meters are stronger and can handle more energy than Smart Meters.",
@@ -10,7 +10,7 @@
       "Correct": 0
     },
     {
-      "Question": "What do Power Meters do?",
+      "Question": "What do Power Meters do?\n",
       "Answers": [
         "Power Meters measure the amount of strength between different electrical currents.",
         "Power Meters read the amount of electrical power used by a home, business, or device.",
@@ -19,7 +19,7 @@
       "Correct": 1
     },
     {
-      "Question": "How often do Smart Meters send data to the power company about power usage?",
+      "Question": "How often do Smart Meters send data to the power company about power usage?\n",
       "Answers": [
         "Never",
         "At night while the family is sleeping",
@@ -29,7 +29,7 @@
       "Correct": 3
     },
     {
-      "Question": "What is the difference between the Smart Grid and Smart Meters? ",
+      "Question": "What is the difference between the Smart Grid and Smart Meters? \n",
       "Answers": [
         "The Smart Grid applies to cities while Smart Meters apply to small towns.",
         "The Smart Grid refers to the network as a whole, while Smart Meters are components that are a part of the Smart Grid",
@@ -39,7 +39,7 @@
       "Correct": 1
     },
     {
-      "Question": "Which of the following is NOT a renewable energy used for Smart Grid. ",
+      "Question": "Which of the following is NOT a renewable energy used for Smart Grid. \n",
       "Answers": [
         "Wind",
         "Solar",
@@ -49,7 +49,7 @@
       "Correct": 2
     },
     {
-      "Question": "Which of the following is a part of the Smart Grid?",
+      "Question": "Which of the following is a part of the Smart Grid?\n",
       "Answers": [
         "Smart Meters",
         "Consumers",
@@ -60,7 +60,7 @@
       "Correct": 3
     },
     {
-      "Question": "The Smart Grid and Smart Meters are at risk of being hacked, since they are connected to a server.",
+      "Question": "The Smart Grid and Smart Meters are at risk of being hacked, since they are connected to a server.\n",
       "Answers": [
         "True",
         "False"
@@ -68,7 +68,7 @@
       "Correct": 0
     },
     {
-      "Question": "Smart Meters can tell if an area is suddenly not using electricity, and will quickly resolve issues like this automatically.",
+      "Question": "Smart Meters can tell if an area is suddenly not using electricity, and will quickly resolve issues like this automatically.\n",
       "Answers": [
         "True",
         "False"
@@ -76,7 +76,7 @@
       "Correct": 0
     },
     {
-      "Question": "What is Electrical Generation?",
+      "Question": "What is Electrical Generation?\n",
       "Answers": [
         "A group of people born when electricity was first created",
         "The process of creating raw energy before it is sent out to people or stored",
@@ -86,7 +86,7 @@
       "Correct": 1
     },
     {
-      "Question": "Does the Smart Grid allow for upgrading over time?",
+      "Question": "Does the Smart Grid allow for upgrading over time?\n",
       "Answers": [
         "Yes, the Smart Grid can be altered and changed over time as needed.",
         "No, the Smart Grid has to stay as it is.",
@@ -96,7 +96,7 @@
       "Correct": 0
     },
     {
-      "Question": "Is there a large amount of electrical waste in the Smart Grid?",
+      "Question": "Is there a large amount of electrical waste in the Smart Grid?\n",
       "Answers": [
         "Yes, the Smart Grid is very inefficient.",
         "Sometimes, the Smart Grid can be efficient... sometimes.",
@@ -105,7 +105,7 @@
       "Correct": 2
     },
     {
-      "Question": "Is the cost for Smart Grid worth it in the long run?",
+      "Question": "Is the cost for Smart Grid worth it in the long run?\n",
       "Answers": [
         "No, the Smart Grid is too expensive overall and not worth it.",
         "Yes, the Smart Grid is expensive at first, but cheaper in the long run.",
@@ -115,7 +115,7 @@
       "Correct": 1
     },
     {
-      "Question": "How good is the Smart Grid for the environment?",
+      "Question": "How good is the Smart Grid for the environment?\n",
       "Answers": [
         "The Smart Grid lowers total use of energy reducing the amount created.",
         "The Smart Grid helps manage energy more efficiently so there is less waste.",
@@ -124,7 +124,7 @@
       "Correct": 2
     },
     {
-      "Question": "Can the Smart Grid tell when some place has lost power?",
+      "Question": "Can the Smart Grid tell when some place has lost power?\n",
       "Answers": [
         "Sometimes, the Smart Grid occasionally checks with the Smart Meters.",
         "No, the Smart Grid never checks the Smart Meters if the power is out.",
