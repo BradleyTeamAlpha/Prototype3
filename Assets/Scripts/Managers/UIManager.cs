@@ -214,12 +214,14 @@ public class UIManager : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        buyHealthButton.SetActive(true);
         Time.timeScale = 1;
     }
 
     public void Pause()
     {
         pauseMenu.SetActive(true);
+        buyHealthButton.SetActive(false);
         Time.timeScale = 0;
     }
 
