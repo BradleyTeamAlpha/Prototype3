@@ -170,7 +170,7 @@ public class PlayerManager : MonoBehaviour
     {
         Debug.Log("Player died!");
         isDead = true;
-        playerAnimator.SetBool("isDead", true);
+        playerAnimator.SetTrigger("isDead");
         gameManager.speed = 0;
         yield return new WaitForSeconds(1f);
         Time.timeScale = 0;
@@ -185,7 +185,7 @@ public class PlayerManager : MonoBehaviour
         ++timesRevived;
         health = startHealth;
         shield = 0;
-        playerAnimator.SetBool("isDead", false);
+        playerAnimator.SetTrigger("Revive");
         gameManager.speed = 5;
         Time.timeScale = 1;
         isReviving = false;
