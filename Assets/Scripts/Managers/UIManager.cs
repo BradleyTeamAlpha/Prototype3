@@ -79,6 +79,9 @@ public class UIManager : MonoBehaviour
 
     [Tooltip("Reference to the pause menu")]
     public GameObject pauseMenu;
+    
+    [Tooltip("Reference to the text to show players score")]
+    public Text endScoreText;
     #endregion
     public void BuyHealth()
     {
@@ -208,6 +211,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowEndgame()
     {
+        endScoreText.text = $"You scored {gameManager.score} points!";
         endscreen.SetActive(true);
     }
 
