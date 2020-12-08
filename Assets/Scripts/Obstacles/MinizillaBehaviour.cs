@@ -18,7 +18,7 @@ public class MinizillaBehaviour : ObstacleBehaviour
         {
             yield return new WaitForSeconds(data.timeBetweenShots);
             Vector2 shootPos = transform.position;
-            shootPos.y += 0.8f;
+            shootPos.y += 0.75f;
             Instantiate(data.projectile, shootPos, Quaternion.Euler(0, 0, 270));
         }
     }
