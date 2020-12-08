@@ -12,10 +12,15 @@ public class PowerupBase : MonoBehaviour
     
     [Tooltip("How quickly the powerups move to the player")]
     public float floatSpeed;
+
+    [Tooltip("Sound effect when player gets a powerup")]
+    public AudioSource powerupCollect;
+
     protected void Start()
     {
         playerManager = GameObject.FindWithTag("GameController").GetComponent<PlayerManager>();
         player = GameObject.FindWithTag("Player");
+        powerupCollect = GameObject.FindWithTag("PowerupSound").GetComponent<AudioSource>();
     }
     
     protected void OnTriggerEnter2D(Collider2D other)
@@ -23,6 +28,8 @@ public class PowerupBase : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DoPowerup();
+            //play sound effect
+            powerupCollect.Play();
             Destroy(gameObject);
         }
     }

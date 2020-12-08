@@ -31,6 +31,9 @@ public class PlayerBehaviour : MonoBehaviour
     [Tooltip("Shield hit particles")]
     public ParticleSystem shieldParticles;
 
+    [Tooltip("Sound that plays on player hit")]
+    public AudioSource playerHitSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,8 +69,11 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            //play hit sound
+            playerHitSound.Play();
             if (playerManager.shield > 0)
             {
+                
                 shieldParticles.Play();
             }
             else

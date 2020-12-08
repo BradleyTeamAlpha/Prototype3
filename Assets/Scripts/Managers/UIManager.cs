@@ -42,6 +42,12 @@ public class UIManager : MonoBehaviour
     [Tooltip("Sound to play when buying health")]
     public AudioSource buySound;
 
+    [Tooltip("Sound to play when answering a question wrong")]
+    public AudioSource wrongAnsSound;
+
+    [Tooltip("Sound to play when answering a question correctly")]
+    public AudioSource rightAnsSound;
+
     [Tooltip("The button that allows health to be bought")]
     public GameObject buyHealthButton;
 
@@ -166,7 +172,7 @@ public class UIManager : MonoBehaviour
         factNotification.SetActive(false);
     }
     
-    public void ChooseAnswer()
+    public void ChooseAnswer()//put wrong/right answer sound effect here
     {
         bool isCorrect = quizManager.CheckAnswer(answerChoices.value);
 
@@ -179,10 +185,12 @@ public class UIManager : MonoBehaviour
         
         if (isCorrect)
         {
+            rightAnsSound.Play();
             text += "\n\nCorrect, the answer is ";
         }
         else
         {
+            wrongAnsSound.Play();
             text += "\n\nIncorrect, the answer is ";
         }
 

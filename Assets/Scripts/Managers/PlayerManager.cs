@@ -96,8 +96,8 @@ public class PlayerManager : MonoBehaviour
 
     [Tooltip("Buying health cooldown in seconds")]
     public float buyCooldown;
-    
-    private bool isDead = false;
+
+    private bool isDead = false;//if true play sound?
     
     /// <summary>
     /// Is the player reviving. True is so, false if not
