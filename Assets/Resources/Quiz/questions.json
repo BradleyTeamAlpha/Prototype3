@@ -3,8 +3,8 @@
     {
       "Question": "What is the difference between a Smart Meter and a Standard Power Meter?",
       "Answers": [
-        "Standard Power Meters collect data like a smart meter does, but need to be checked manually instead of automatically.",
-        "Standard Power Meters are stronger and can handle more energy than smart meters.",
+        "Standard Power Meters collect data like a Smart Meter does, but need to be checked manually instead of automatically.",
+        "Standard Power Meters are stronger and can handle more energy than Smart Meters.",
         "Smart Meters follow the metric system while Standard Power Meters follow the Imperial system."
       ],
       "Correct": 0
