@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Laserzilla
   m_EditorClassIdentifier: 
   damage: 5
-  projectile: {fileID: 40461774606950082, guid: 8b0aaf38f6b1fc6469c2505777473846, type: 3}
-  timeBetweenShots: 10
+  projectile: {fileID: 8533858366379875178, guid: c42c27102e4647943ab7936db765ec65, type: 3}
+  timeBetweenShots: 3
