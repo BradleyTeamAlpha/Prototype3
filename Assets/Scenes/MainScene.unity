@@ -461,11 +461,11 @@ RectTransform:
   m_Children:
   - {fileID: 1003753007}
   m_Father: {fileID: 692806317}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.876669, y: 91.78672}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 139, y: -162.01997}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101531681
@@ -923,9 +923,9 @@ RectTransform:
   m_Father: {fileID: 692806317}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.1977043, y: -90.49488}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 139, y: -221.52997}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &141758391
@@ -1747,7 +1747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3043,7 +3043,7 @@ RectTransform:
   - {fileID: 692806317}
   - {fileID: 1252416756}
   m_Father: {fileID: 1269326163}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3484,11 +3484,11 @@ RectTransform:
   m_Children:
   - {fileID: 29603133}
   m_Father: {fileID: 692806317}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.876669, y: -31.820389}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 139, y: -43}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675347083
@@ -3607,6 +3607,7 @@ GameObject:
   - component: {fileID: 692806317}
   - component: {fileID: 692806319}
   - component: {fileID: 692806318}
+  - component: {fileID: 692806320}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3625,9 +3626,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 101531680}
-  - {fileID: 1739694329}
   - {fileID: 675347082}
+  - {fileID: 1739694329}
+  - {fileID: 101531680}
   - {fileID: 141758390}
   m_Father: {fileID: 625160553}
   m_RootOrder: 0
@@ -3675,6 +3676,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692806316}
   m_CullTransparentMesh: 0
+--- !u!114 &692806320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692806316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 59
+    m_Right: 0
+    m_Top: 28
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &707380327
 GameObject:
   m_ObjectHideFlags: 0
@@ -5138,7 +5165,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 1343033950}
   m_HorizontalScrollbar: {fileID: 1601777429}
   m_VerticalScrollbar: {fileID: 1653140143}
@@ -7562,7 +7589,7 @@ ParticleSystem:
       repeatInterval: 0.01
       probability: 1
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -7573,21 +7600,21 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 1
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 0
+          value: 0.662162
+          inSlope: -1.1407921
+          outSlope: -1.1407921
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.17768598
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -11971,7 +11998,7 @@ MonoBehaviour:
     Answers: []
     Correct: 0
   maxQuestions: 5
-  quizPoints: 10
+  quizPoints: 100
 --- !u!114 &1185653642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12241,8 +12268,8 @@ RectTransform:
   - {fileID: 1339156512}
   - {fileID: 2032816188}
   - {fileID: 350878625}
-  - {fileID: 625160553}
   - {fileID: 2097666237}
+  - {fileID: 625160553}
   - {fileID: 1897320531}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -13615,7 +13642,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -13626,18 +13653,18 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 1
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
+          value: 0.5675678
           inSlope: 1
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -17945,7 +17972,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 862606693}
   m_HorizontalScrollbar: {fileID: 602582164}
   m_VerticalScrollbar: {fileID: 2077265421}
@@ -19529,9 +19556,9 @@ RectTransform:
   m_Father: {fileID: 692806317}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.876669, y: 31.556904}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 139, y: -102.50999}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739694330
@@ -25063,7 +25090,11 @@ MonoBehaviour:
 
     Once
     you start the quiz, you may view the facts you collected by clicking the button
-    that will appear in the bottom left of the screen.'
+    that will appear in the bottom left of the screen.
+
+
+    On your first death,
+    you  have a chance to revive by getting the first question correct!'
 --- !u!222 &1886000246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30354,7 +30385,7 @@ RectTransform:
   - {fileID: 1824735949}
   - {fileID: 1573359622}
   m_Father: {fileID: 1269326163}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
